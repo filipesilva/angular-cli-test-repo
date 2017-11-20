@@ -1,0 +1,26 @@
+﻿<form novalidate [formGroup]="formGroup">
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <label>*{{ "mod9.project2Mod9.fields.projectName_display" | translate }}:</label>
+      <input type="text" class="form-control" [ngClass]="{'is-invalid': isInvalid(formGroup, 'projectName')}" maxlength="200" formControlName="projectName" required />
+      <div class="invalid-feedback" *ngIf="hasError(formGroup, 'projectName', 'required')">{{ "mod9.project2Mod9.fields.projectName_required" | translate }}</div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label>{{ "mod9.project2Mod9.fields.enabled_display" | translate }}:</label>
+      <br />
+      <label class="switch switch-default switch-primary">
+        <input type="checkbox" class="switch-input" formControlName="enabled" />
+        <span class="switch-label"></span>
+        <span class="switch-handle"></span>
+      </label>
+    </div>
+  </div>
+  <div class="form-actions">
+    <button type="button" class="btn btn-primary mr-2" [ladda]="isLoading" [disabled]="!hasPermission('mod9.project2Mod9.save')" (click)="save()">
+      {{ "shared.buttons.save" | translate }}
+    </button>
+    <button type="button" class="btn btn-default mr-2" (click)="back()">
+      {{ "shared.buttons.cancel" | translate }}
+    </button>
+  </div>
+</form>

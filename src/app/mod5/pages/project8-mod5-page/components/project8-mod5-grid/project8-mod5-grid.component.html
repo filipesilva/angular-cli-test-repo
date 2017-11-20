@@ -1,0 +1,35 @@
+﻿<table class="table table-responsive table-striped table-vcenter">
+  <colgroup>
+    <col style="width: 78%" />
+    <col style="width: 10%" />
+    <col style="width: 12%" class="hidden-print" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th class="sorting" (click)="order('projectName')" [ngClass]="checkClass('projectName')">
+        {{ "mod5.project8Mod5.fields.projectName_display" | translate }}
+      </th>
+      <th class="text-center sorting" (click)="order('enabled')" [ngClass]="checkClass('enabled')">
+        {{ "mod5.project8Mod5.fields.enabled_display" | translate }}
+      </th>
+      <th class="text-center hidden-print"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of items" (dblclick)="edit(item.projectId)">
+      <td>{{ item.projectName }}</td>
+      <td class="text-center"><i [ngClass]="{'fa fa-check text-primary': item.enabled}"></i></td>
+      <td class="text-center hidden-print">
+        <button class="btn btn-sm btn-outline-success mr-2" [title]="'shared.buttons.edit' | translate" [disabled]="!hasPermission('mod5.project8Mod5.save')" (click)="edit(item.projectId)">
+          <i class="fa fa-pencil"></i>
+        </button>
+        <button class="btn btn-sm btn-outline-danger mr-2" [title]="'shared.buttons.delete' | translate" [disabled]="!hasPermission('mod5.project8Mod5.delete')" (click)="confirmDelete(item.projectId)">
+          <i class="fa fa-trash-o"></i>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<app-grid-pagination [grid]="this"></app-grid-pagination>
+<app-loading-indicator [isRunning]="isFirstLoading" [layout]="'mode1'"></app-loading-indicator>
+<app-modal-delete #modalDelete></app-modal-delete>

@@ -1,0 +1,35 @@
+﻿<table class="table table-responsive table-striped table-vcenter">
+  <colgroup>
+    <col style="width: 68%" />
+    <col style="width: 20%" />
+    <col style="width: 12%" class="hidden-print" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th class="sorting" (click)="order('recursiveName')" [ngClass]="checkClass('recursiveName')">
+        {{ "mod4.category8Mod4.fields.recursiveName_display" | translate }}
+      </th>
+      <th class="sorting" (click)="order('categoryName')" [ngClass]="checkClass('categoryName')">
+        {{ "mod4.category8Mod4.fields.categoryName_display" | translate }}
+      </th>
+      <th class="text-center hidden-print"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of items" (dblclick)="edit(item.categoryId)">
+      <td>{{ item.recursiveName }}</td>
+      <td>{{ item.categoryName }}</td>
+      <td class="text-center hidden-print">
+        <button class="btn btn-sm btn-outline-success mr-2" [title]="'shared.buttons.edit' | translate" [disabled]="!hasPermission('mod4.category8Mod4.save')" (click)="edit(item.categoryId)">
+          <i class="fa fa-pencil"></i>
+        </button>
+        <button class="btn btn-sm btn-outline-danger mr-2" [title]="'shared.buttons.delete' | translate" [disabled]="!hasPermission('mod4.category8Mod4.delete')" (click)="confirmDelete(item.categoryId)">
+          <i class="fa fa-trash-o"></i>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<app-grid-pagination [grid]="this"></app-grid-pagination>
+<app-loading-indicator [isRunning]="isFirstLoading" [layout]="'mode1'"></app-loading-indicator>
+<app-modal-delete #modalDelete></app-modal-delete>

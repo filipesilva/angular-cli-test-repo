@@ -1,0 +1,43 @@
+<div *ngIf="!grid?.isFirstLoading">
+  <div class="row" *ngIf="grid?.pagination?.totalItemCount > 0; else notfound">
+    <div class="col-sm-8 d-none d-sm-block">
+      <div class="form-inline">
+        <select class="form-control" [(ngModel)]="grid.pagination.pageSize" (ngModelChange)="newPageSize()">
+          <option value="10">10</option>
+          <option value="25">25</option>
+          <option value="50">50</option>
+          <option value="100">100</option>
+        </select> &nbsp;
+        <span innerHTML="{{ 'shared.pagination.records' | translate: { v1: grid.pagination.firstItemOnPage | number:'1.0-0', v2: grid.pagination.lastItemOnPage | number:'1.0-0', v3: grid.pagination.totalItemCount | number:'1.0-0' } }}"></span>
+      </div>
+    </div>
+    <div class="col-sm-4 col-xs-12">
+      <ul class="pagination float-right">
+        <li class="page-item prev">
+          <button *ngIf="grid.pagination.hasPreviousPage" class="page-link" [ngClass]="{'disabled': !grid.pagination.hasPreviousPage}" (click)="page(grid.pagination.pageNumber - 1)">
+            <i class="fa fa-angle-double-left"></i>
+          </button>
+          <button *ngIf="!grid.pagination.hasPreviousPage" class="page-link" [ngClass]="{'disabled': !grid.pagination.hasPreviousPage}">
+            <i class="fa fa-angle-double-left"></i>
+          </button>
+        </li>
+        <li class="page-item" [ngClass]="{ 'active': n == grid.pagination.pageNumber } " *ngFor="let n of grid.pagination.paginationRange">
+          <button class="page-link" (click)="page(n)">{{ n }}</button>
+        </li>
+        <li class="page-item next">
+          <button *ngIf="grid.pagination.hasNextPage" class="page-link" [ngClass]="{'disabled': !grid.pagination.hasNextPage}" (click)="page(grid.pagination.pageNumber + 1)">
+            <i class="fa fa-angle-double-right"></i>
+          </button>
+          <button *ngIf="!grid.pagination.hasNextPage" class="page-link" [ngClass]="{'disabled': !grid.pagination.hasNextPage}">
+            <i class="fa fa-angle-double-right"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <ng-template #notfound>
+    <div class="text-center">
+      {{ "shared.grid.notFound" | translate }}
+    </div>
+  </ng-template>
+</div>

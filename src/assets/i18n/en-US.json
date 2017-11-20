@@ -1,0 +1,5595 @@
+﻿{
+  "shared": {
+    "buttons": {
+      "new": "New",
+      "save": "Save",
+      "cancel": "Cancel",
+      "back": "Back",
+      "search": "Search",
+      "refresh": "Refresh",
+      "filter": "Filter",
+      "next": "Next",
+      "previous": "Previous",
+      "delete": "Delete",
+      "edit": "Edit"
+    },
+    "input": {
+      "select": "-- Select --",
+      "selectNotFound": "No records found.",
+      "date": "mm/dd/yyyy",
+      "file": {
+        "success": "File uploaded successfully.",
+        "error": "Error sending file.",
+        "sendind": "Sending {{v1}}...",
+        "saving": "Saving {{v1}}..."
+      }
+    },
+    "grid": {
+      "notFound": "No records found."
+    },
+    "pagination": {
+      "records": "records. Showing {{v1}} to {{v2}} of {{v3}} records."
+    },
+    "modals": {
+      "delete": {
+        "title": "Exclusion confirmation",
+        "content": "Are you sure you want to delete the selected item?"
+      },
+      "filter": {
+        "title": "Filter"
+      }
+    }
+  },
+  "cg": {
+    "authorization": {
+      "title": "Authorizations",
+      "fields": {
+        "idFeature_display": "Feature",
+        "idFeature_required": "Feature is required.",
+        "idRole_display": "Role",
+        "idRole_required": "Role is required.",
+        "authorized_display": "Authorized"
+      }
+    },
+    "configuration": {
+      "title": "Settings",
+      "fields": {
+        "key_display": "Key",
+        "key_required": "Key is required.",
+        "description_display": "Description",
+        "isEncrypted_display": "Encrypted",
+        "value_display": "Value"
+      }
+    },
+    "culture": {
+      "title": "Cultures",
+      "fields": {
+        "cultureName_display": "Culture name",
+        "cultureName_required": "Culture name is required.",
+        "cultureKey_display": "Culture key",
+        "cultureKey_required": "Culture key is required.",
+        "exhibitionName_display": "Exhibition name",
+        "exhibitionName_required": "Exhibition name is required.",
+        "enabled_display": "Enabled",
+        "dateFormat_display": "Date format",
+        "dateFormat_required": "Date format is required.",
+        "decimalFormat_display": "Decimal format",
+        "decimalFormat_required": "Decimal format is required."
+      }
+    },
+    "feature": {
+      "title": "Features",
+      "fields": {
+        "description_display": "Description",
+        "featureName_display": "Feature name",
+        "featureName_required": "Feature name is required.",
+        "featureKey_display": "Key",
+        "idFeatureParent_display": "Parent",
+        "recursiveName_display": "Path"
+      }
+    },
+    "menuItem": {
+      "title": "Menu items",
+      "tabs": {
+        "menuItemCulture": "Cultures"
+      },
+      "fields": {
+        "menuText_display": "Menu text",
+        "menuText_required": "Menu text is required.",
+        "groupName_display": "Group name",
+        "url_display": "Url",
+        "menuOrder_display": "Order",
+        "menuOrder_invalid": "Invalid order.",
+        "cssClass_display": "Css class",
+        "checkPermission_display": "Check permission",
+        "featureKey_display": "Feature key",
+        "enabled_display": "Enabled",
+        "authenticated_display": "Authenticated",
+        "idMenuItemParent_display": "Parent",
+        "recursiveName_display": "Path"
+      }
+    },
+    "menuItemCulture": {
+      "title": "Menu cultures",
+      "fields": {
+        "idMenuItem_display": "Menu item",
+        "idMenuItem_required": "Menu item is required.",
+        "idCulture_display": "Culture",
+        "idCulture_required": "Culture is required.",
+        "menuText_display": "Text",
+        "menuText_required": "Text is required."
+      }
+    },
+    "role": {
+      "title": "Roles",
+      "fields": {
+        "roleName_display": "Role name",
+        "roleName_required": "Role name is required.",
+        "description_display": "Description",
+        "enabled_display": "Enabled",
+        "user_display": "Users"
+      }
+    },
+    "user": {
+      "title": "Users",
+      "tabs": {
+        "userPhoto": "Photos"
+      },
+      "fields": {
+        "firstName_display": "First name",
+        "firstName_required": "First name is required.",
+        "lastName_display": "Last name",
+        "username_display": "Username",
+        "username_required": "Username is required.",
+        "email_display": "Email",
+        "email_required": "Email is required.",
+        "emailConfirmed_display": "Confirmed email",
+        "password_display": "Password",
+        "enabled_display": "Enabled",
+        "securityKey_display": "Security key",
+        "creationDate_display": "Creation date",
+        "creationDate_required": "Createion date is required.",
+        "creationDate_invalid": "Invalid creation date.",
+        "blocked_display": "Blocked",
+        "invalidLogonAmount_display": "Invalid attempts",
+        "invalidLogonAmount_required": "Invalid attempts is required.",
+        "invalidLogonAmount_invalid": "Invalid attempts are invalid.",
+        "logonDate_display": "Logon date",
+        "logonDate_invalid": "Invalid logon date.",
+        "lastActionDate_display": "Last action date",
+        "lastActionDate_invalid": "Invalid last action date.",
+        "role_display": "Roles"
+      }
+    },
+    "userPhoto": {
+      "title": "User photos",
+      "fields": {
+        "fileName_display": "File name",
+        "contentType_display": "Content type",
+        "fileSize_display": "File size",
+        "fileSize_invalid": "Invalid file size.",
+        "photo_display": "Photo"
+      }
+    }
+  },
+  "mod1": {
+    "category10Mod1": {
+      "title": "Category10",
+      "fields": {
+        "parentId_display": "Category10 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category1Mod1": {
+      "title": "Category1",
+      "fields": {
+        "parentId_display": "Category1 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category2Mod1": {
+      "title": "Category2",
+      "fields": {
+        "parentId_display": "Category2 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category3Mod1": {
+      "title": "Category3",
+      "fields": {
+        "parentId_display": "Category3 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category4Mod1": {
+      "title": "Category4",
+      "fields": {
+        "parentId_display": "Category4 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category5Mod1": {
+      "title": "Category5",
+      "fields": {
+        "parentId_display": "Category5 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category6Mod1": {
+      "title": "Category6",
+      "fields": {
+        "parentId_display": "Category6 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category7Mod1": {
+      "title": "Category7",
+      "fields": {
+        "parentId_display": "Category7 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category8Mod1": {
+      "title": "Category8",
+      "fields": {
+        "parentId_display": "Category8 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category9Mod1": {
+      "title": "Category9",
+      "fields": {
+        "parentId_display": "Category9 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "issue10Mod1": {
+      "title": "Issue10",
+      "fields": {
+        "projectId_display": "Project10",
+        "projectId_required": "Project10 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category10",
+        "categoryId_required": "Category10 is required.",
+        "statusId_display": "Status10",
+        "statusId_required": "Status10 is required.",
+        "severityId_display": "Severity10",
+        "severityId_required": "Severity10 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue1Mod1": {
+      "title": "Issue1",
+      "fields": {
+        "projectId_display": "Project1",
+        "projectId_required": "Project1 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category1",
+        "categoryId_required": "Category1 is required.",
+        "statusId_display": "Status1",
+        "statusId_required": "Status1 is required.",
+        "severityId_display": "Severity1",
+        "severityId_required": "Severity1 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue2Mod1": {
+      "title": "Issue2",
+      "fields": {
+        "projectId_display": "Project2",
+        "projectId_required": "Project2 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category2",
+        "categoryId_required": "Category2 is required.",
+        "statusId_display": "Status2",
+        "statusId_required": "Status2 is required.",
+        "severityId_display": "Severity2",
+        "severityId_required": "Severity2 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue3Mod1": {
+      "title": "Issue3",
+      "fields": {
+        "projectId_display": "Project3",
+        "projectId_required": "Project3 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category3",
+        "categoryId_required": "Category3 is required.",
+        "statusId_display": "Status3",
+        "statusId_required": "Status3 is required.",
+        "severityId_display": "Severity3",
+        "severityId_required": "Severity3 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue4Mod1": {
+      "title": "Issue4",
+      "fields": {
+        "projectId_display": "Project4",
+        "projectId_required": "Project4 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category4",
+        "categoryId_required": "Category4 is required.",
+        "statusId_display": "Status4",
+        "statusId_required": "Status4 is required.",
+        "severityId_display": "Severity4",
+        "severityId_required": "Severity4 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue5Mod1": {
+      "title": "Issue5",
+      "fields": {
+        "projectId_display": "Project5",
+        "projectId_required": "Project5 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category5",
+        "categoryId_required": "Category5 is required.",
+        "statusId_display": "Status5",
+        "statusId_required": "Status5 is required.",
+        "severityId_display": "Severity5",
+        "severityId_required": "Severity5 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue6Mod1": {
+      "title": "Issue6",
+      "fields": {
+        "projectId_display": "Project6",
+        "projectId_required": "Project6 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category6",
+        "categoryId_required": "Category6 is required.",
+        "statusId_display": "Status6",
+        "statusId_required": "Status6 is required.",
+        "severityId_display": "Severity6",
+        "severityId_required": "Severity6 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue7Mod1": {
+      "title": "Issue7",
+      "fields": {
+        "projectId_display": "Project7",
+        "projectId_required": "Project7 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category7",
+        "categoryId_required": "Category7 is required.",
+        "statusId_display": "Status7",
+        "statusId_required": "Status7 is required.",
+        "severityId_display": "Severity7",
+        "severityId_required": "Severity7 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue8Mod1": {
+      "title": "Issue8",
+      "fields": {
+        "projectId_display": "Project8",
+        "projectId_required": "Project8 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category8",
+        "categoryId_required": "Category8 is required.",
+        "statusId_display": "Status8",
+        "statusId_required": "Status8 is required.",
+        "severityId_display": "Severity8",
+        "severityId_required": "Severity8 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue9Mod1": {
+      "title": "Issue9",
+      "fields": {
+        "projectId_display": "Project9",
+        "projectId_required": "Project9 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category9",
+        "categoryId_required": "Category9 is required.",
+        "statusId_display": "Status9",
+        "statusId_required": "Status9 is required.",
+        "severityId_display": "Severity9",
+        "severityId_required": "Severity9 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "project10Mod1": {
+      "title": "Project10",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project1Mod1": {
+      "title": "Project1",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project2Mod1": {
+      "title": "Project2",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project3Mod1": {
+      "title": "Project3",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project4Mod1": {
+      "title": "Project4",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project5Mod1": {
+      "title": "Project5",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project6Mod1": {
+      "title": "Project6",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project7Mod1": {
+      "title": "Project7",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project8Mod1": {
+      "title": "Project8",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project9Mod1": {
+      "title": "Project9",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "severity10Mod1": {
+      "title": "Severity10",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity1Mod1": {
+      "title": "Severity1",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity2Mod1": {
+      "title": "Severity2",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity3Mod1": {
+      "title": "Severity3",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity4Mod1": {
+      "title": "Severity4",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity5Mod1": {
+      "title": "Severity5",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity6Mod1": {
+      "title": "Severity6",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity7Mod1": {
+      "title": "Severity7",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity8Mod1": {
+      "title": "Severity8",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity9Mod1": {
+      "title": "Severity9",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status10Mod1": {
+      "title": "Status10",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status1Mod1": {
+      "title": "Status1",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status2Mod1": {
+      "title": "Status2",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status3Mod1": {
+      "title": "Status3",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status4Mod1": {
+      "title": "Status4",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status5Mod1": {
+      "title": "Status5",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status6Mod1": {
+      "title": "Status6",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status7Mod1": {
+      "title": "Status7",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status8Mod1": {
+      "title": "Status8",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status9Mod1": {
+      "title": "Status9",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    }
+  },
+  "mod10": {
+    "category10Mod10": {
+      "title": "Category10",
+      "fields": {
+        "parentId_display": "Category10 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category1Mod10": {
+      "title": "Category1",
+      "fields": {
+        "parentId_display": "Category1 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category2Mod10": {
+      "title": "Category2",
+      "fields": {
+        "parentId_display": "Category2 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category3Mod10": {
+      "title": "Category3",
+      "fields": {
+        "parentId_display": "Category3 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category4Mod10": {
+      "title": "Category4",
+      "fields": {
+        "parentId_display": "Category4 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category5Mod10": {
+      "title": "Category5",
+      "fields": {
+        "parentId_display": "Category5 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category6Mod10": {
+      "title": "Category6",
+      "fields": {
+        "parentId_display": "Category6 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category7Mod10": {
+      "title": "Category7",
+      "fields": {
+        "parentId_display": "Category7 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category8Mod10": {
+      "title": "Category8",
+      "fields": {
+        "parentId_display": "Category8 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category9Mod10": {
+      "title": "Category9",
+      "fields": {
+        "parentId_display": "Category9 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "issue10Mod10": {
+      "title": "Issue10",
+      "fields": {
+        "projectId_display": "Project10",
+        "projectId_required": "Project10 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category10",
+        "categoryId_required": "Category10 is required.",
+        "statusId_display": "Status10",
+        "statusId_required": "Status10 is required.",
+        "severityId_display": "Severity10",
+        "severityId_required": "Severity10 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue1Mod10": {
+      "title": "Issue1",
+      "fields": {
+        "projectId_display": "Project1",
+        "projectId_required": "Project1 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category1",
+        "categoryId_required": "Category1 is required.",
+        "statusId_display": "Status1",
+        "statusId_required": "Status1 is required.",
+        "severityId_display": "Severity1",
+        "severityId_required": "Severity1 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue2Mod10": {
+      "title": "Issue2",
+      "fields": {
+        "projectId_display": "Project2",
+        "projectId_required": "Project2 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category2",
+        "categoryId_required": "Category2 is required.",
+        "statusId_display": "Status2",
+        "statusId_required": "Status2 is required.",
+        "severityId_display": "Severity2",
+        "severityId_required": "Severity2 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue3Mod10": {
+      "title": "Issue3",
+      "fields": {
+        "projectId_display": "Project3",
+        "projectId_required": "Project3 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category3",
+        "categoryId_required": "Category3 is required.",
+        "statusId_display": "Status3",
+        "statusId_required": "Status3 is required.",
+        "severityId_display": "Severity3",
+        "severityId_required": "Severity3 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue4Mod10": {
+      "title": "Issue4",
+      "fields": {
+        "projectId_display": "Project4",
+        "projectId_required": "Project4 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category4",
+        "categoryId_required": "Category4 is required.",
+        "statusId_display": "Status4",
+        "statusId_required": "Status4 is required.",
+        "severityId_display": "Severity4",
+        "severityId_required": "Severity4 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue5Mod10": {
+      "title": "Issue5",
+      "fields": {
+        "projectId_display": "Project5",
+        "projectId_required": "Project5 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category5",
+        "categoryId_required": "Category5 is required.",
+        "statusId_display": "Status5",
+        "statusId_required": "Status5 is required.",
+        "severityId_display": "Severity5",
+        "severityId_required": "Severity5 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue6Mod10": {
+      "title": "Issue6",
+      "fields": {
+        "projectId_display": "Project6",
+        "projectId_required": "Project6 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category6",
+        "categoryId_required": "Category6 is required.",
+        "statusId_display": "Status6",
+        "statusId_required": "Status6 is required.",
+        "severityId_display": "Severity6",
+        "severityId_required": "Severity6 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue7Mod10": {
+      "title": "Issue7",
+      "fields": {
+        "projectId_display": "Project7",
+        "projectId_required": "Project7 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category7",
+        "categoryId_required": "Category7 is required.",
+        "statusId_display": "Status7",
+        "statusId_required": "Status7 is required.",
+        "severityId_display": "Severity7",
+        "severityId_required": "Severity7 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue8Mod10": {
+      "title": "Issue8",
+      "fields": {
+        "projectId_display": "Project8",
+        "projectId_required": "Project8 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category8",
+        "categoryId_required": "Category8 is required.",
+        "statusId_display": "Status8",
+        "statusId_required": "Status8 is required.",
+        "severityId_display": "Severity8",
+        "severityId_required": "Severity8 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue9Mod10": {
+      "title": "Issue9",
+      "fields": {
+        "projectId_display": "Project9",
+        "projectId_required": "Project9 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category9",
+        "categoryId_required": "Category9 is required.",
+        "statusId_display": "Status9",
+        "statusId_required": "Status9 is required.",
+        "severityId_display": "Severity9",
+        "severityId_required": "Severity9 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "project10Mod10": {
+      "title": "Project10",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project1Mod10": {
+      "title": "Project1",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project2Mod10": {
+      "title": "Project2",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project3Mod10": {
+      "title": "Project3",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project4Mod10": {
+      "title": "Project4",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project5Mod10": {
+      "title": "Project5",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project6Mod10": {
+      "title": "Project6",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project7Mod10": {
+      "title": "Project7",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project8Mod10": {
+      "title": "Project8",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project9Mod10": {
+      "title": "Project9",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "severity10Mod10": {
+      "title": "Severity10",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity1Mod10": {
+      "title": "Severity1",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity2Mod10": {
+      "title": "Severity2",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity3Mod10": {
+      "title": "Severity3",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity4Mod10": {
+      "title": "Severity4",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity5Mod10": {
+      "title": "Severity5",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity6Mod10": {
+      "title": "Severity6",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity7Mod10": {
+      "title": "Severity7",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity8Mod10": {
+      "title": "Severity8",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity9Mod10": {
+      "title": "Severity9",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status10Mod10": {
+      "title": "Status10",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status1Mod10": {
+      "title": "Status1",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status2Mod10": {
+      "title": "Status2",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status3Mod10": {
+      "title": "Status3",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status4Mod10": {
+      "title": "Status4",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status5Mod10": {
+      "title": "Status5",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status6Mod10": {
+      "title": "Status6",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status7Mod10": {
+      "title": "Status7",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status8Mod10": {
+      "title": "Status8",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status9Mod10": {
+      "title": "Status9",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    }
+  },
+  "mod2": {
+    "category10Mod2": {
+      "title": "Category10",
+      "fields": {
+        "parentId_display": "Category10 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category1Mod2": {
+      "title": "Category1",
+      "fields": {
+        "parentId_display": "Category1 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category2Mod2": {
+      "title": "Category2",
+      "fields": {
+        "parentId_display": "Category2 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category3Mod2": {
+      "title": "Category3",
+      "fields": {
+        "parentId_display": "Category3 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category4Mod2": {
+      "title": "Category4",
+      "fields": {
+        "parentId_display": "Category4 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category5Mod2": {
+      "title": "Category5",
+      "fields": {
+        "parentId_display": "Category5 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category6Mod2": {
+      "title": "Category6",
+      "fields": {
+        "parentId_display": "Category6 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category7Mod2": {
+      "title": "Category7",
+      "fields": {
+        "parentId_display": "Category7 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category8Mod2": {
+      "title": "Category8",
+      "fields": {
+        "parentId_display": "Category8 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category9Mod2": {
+      "title": "Category9",
+      "fields": {
+        "parentId_display": "Category9 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "issue10Mod2": {
+      "title": "Issue10",
+      "fields": {
+        "projectId_display": "Project10",
+        "projectId_required": "Project10 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category10",
+        "categoryId_required": "Category10 is required.",
+        "statusId_display": "Status10",
+        "statusId_required": "Status10 is required.",
+        "severityId_display": "Severity10",
+        "severityId_required": "Severity10 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue1Mod2": {
+      "title": "Issue1",
+      "fields": {
+        "projectId_display": "Project1",
+        "projectId_required": "Project1 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category1",
+        "categoryId_required": "Category1 is required.",
+        "statusId_display": "Status1",
+        "statusId_required": "Status1 is required.",
+        "severityId_display": "Severity1",
+        "severityId_required": "Severity1 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue2Mod2": {
+      "title": "Issue2",
+      "fields": {
+        "projectId_display": "Project2",
+        "projectId_required": "Project2 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category2",
+        "categoryId_required": "Category2 is required.",
+        "statusId_display": "Status2",
+        "statusId_required": "Status2 is required.",
+        "severityId_display": "Severity2",
+        "severityId_required": "Severity2 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue3Mod2": {
+      "title": "Issue3",
+      "fields": {
+        "projectId_display": "Project3",
+        "projectId_required": "Project3 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category3",
+        "categoryId_required": "Category3 is required.",
+        "statusId_display": "Status3",
+        "statusId_required": "Status3 is required.",
+        "severityId_display": "Severity3",
+        "severityId_required": "Severity3 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue4Mod2": {
+      "title": "Issue4",
+      "fields": {
+        "projectId_display": "Project4",
+        "projectId_required": "Project4 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category4",
+        "categoryId_required": "Category4 is required.",
+        "statusId_display": "Status4",
+        "statusId_required": "Status4 is required.",
+        "severityId_display": "Severity4",
+        "severityId_required": "Severity4 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue5Mod2": {
+      "title": "Issue5",
+      "fields": {
+        "projectId_display": "Project5",
+        "projectId_required": "Project5 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category5",
+        "categoryId_required": "Category5 is required.",
+        "statusId_display": "Status5",
+        "statusId_required": "Status5 is required.",
+        "severityId_display": "Severity5",
+        "severityId_required": "Severity5 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue6Mod2": {
+      "title": "Issue6",
+      "fields": {
+        "projectId_display": "Project6",
+        "projectId_required": "Project6 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category6",
+        "categoryId_required": "Category6 is required.",
+        "statusId_display": "Status6",
+        "statusId_required": "Status6 is required.",
+        "severityId_display": "Severity6",
+        "severityId_required": "Severity6 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue7Mod2": {
+      "title": "Issue7",
+      "fields": {
+        "projectId_display": "Project7",
+        "projectId_required": "Project7 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category7",
+        "categoryId_required": "Category7 is required.",
+        "statusId_display": "Status7",
+        "statusId_required": "Status7 is required.",
+        "severityId_display": "Severity7",
+        "severityId_required": "Severity7 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue8Mod2": {
+      "title": "Issue8",
+      "fields": {
+        "projectId_display": "Project8",
+        "projectId_required": "Project8 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category8",
+        "categoryId_required": "Category8 is required.",
+        "statusId_display": "Status8",
+        "statusId_required": "Status8 is required.",
+        "severityId_display": "Severity8",
+        "severityId_required": "Severity8 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue9Mod2": {
+      "title": "Issue9",
+      "fields": {
+        "projectId_display": "Project9",
+        "projectId_required": "Project9 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category9",
+        "categoryId_required": "Category9 is required.",
+        "statusId_display": "Status9",
+        "statusId_required": "Status9 is required.",
+        "severityId_display": "Severity9",
+        "severityId_required": "Severity9 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "project10Mod2": {
+      "title": "Project10",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project1Mod2": {
+      "title": "Project1",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project2Mod2": {
+      "title": "Project2",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project3Mod2": {
+      "title": "Project3",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project4Mod2": {
+      "title": "Project4",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project5Mod2": {
+      "title": "Project5",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project6Mod2": {
+      "title": "Project6",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project7Mod2": {
+      "title": "Project7",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project8Mod2": {
+      "title": "Project8",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project9Mod2": {
+      "title": "Project9",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "severity10Mod2": {
+      "title": "Severity10",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity1Mod2": {
+      "title": "Severity1",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity2Mod2": {
+      "title": "Severity2",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity3Mod2": {
+      "title": "Severity3",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity4Mod2": {
+      "title": "Severity4",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity5Mod2": {
+      "title": "Severity5",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity6Mod2": {
+      "title": "Severity6",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity7Mod2": {
+      "title": "Severity7",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity8Mod2": {
+      "title": "Severity8",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity9Mod2": {
+      "title": "Severity9",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status10Mod2": {
+      "title": "Status10",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status1Mod2": {
+      "title": "Status1",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status2Mod2": {
+      "title": "Status2",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status3Mod2": {
+      "title": "Status3",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status4Mod2": {
+      "title": "Status4",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status5Mod2": {
+      "title": "Status5",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status6Mod2": {
+      "title": "Status6",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status7Mod2": {
+      "title": "Status7",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status8Mod2": {
+      "title": "Status8",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status9Mod2": {
+      "title": "Status9",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    }
+  },
+  "mod3": {
+    "category10Mod3": {
+      "title": "Category10",
+      "fields": {
+        "parentId_display": "Category10 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category1Mod3": {
+      "title": "Category1",
+      "fields": {
+        "parentId_display": "Category1 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category2Mod3": {
+      "title": "Category2",
+      "fields": {
+        "parentId_display": "Category2 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category3Mod3": {
+      "title": "Category3",
+      "fields": {
+        "parentId_display": "Category3 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category4Mod3": {
+      "title": "Category4",
+      "fields": {
+        "parentId_display": "Category4 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category5Mod3": {
+      "title": "Category5",
+      "fields": {
+        "parentId_display": "Category5 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category6Mod3": {
+      "title": "Category6",
+      "fields": {
+        "parentId_display": "Category6 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category7Mod3": {
+      "title": "Category7",
+      "fields": {
+        "parentId_display": "Category7 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category8Mod3": {
+      "title": "Category8",
+      "fields": {
+        "parentId_display": "Category8 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category9Mod3": {
+      "title": "Category9",
+      "fields": {
+        "parentId_display": "Category9 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "issue10Mod3": {
+      "title": "Issue10",
+      "fields": {
+        "projectId_display": "Project10",
+        "projectId_required": "Project10 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category10",
+        "categoryId_required": "Category10 is required.",
+        "statusId_display": "Status10",
+        "statusId_required": "Status10 is required.",
+        "severityId_display": "Severity10",
+        "severityId_required": "Severity10 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue1Mod3": {
+      "title": "Issue1",
+      "fields": {
+        "projectId_display": "Project1",
+        "projectId_required": "Project1 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category1",
+        "categoryId_required": "Category1 is required.",
+        "statusId_display": "Status1",
+        "statusId_required": "Status1 is required.",
+        "severityId_display": "Severity1",
+        "severityId_required": "Severity1 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue2Mod3": {
+      "title": "Issue2",
+      "fields": {
+        "projectId_display": "Project2",
+        "projectId_required": "Project2 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category2",
+        "categoryId_required": "Category2 is required.",
+        "statusId_display": "Status2",
+        "statusId_required": "Status2 is required.",
+        "severityId_display": "Severity2",
+        "severityId_required": "Severity2 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue3Mod3": {
+      "title": "Issue3",
+      "fields": {
+        "projectId_display": "Project3",
+        "projectId_required": "Project3 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category3",
+        "categoryId_required": "Category3 is required.",
+        "statusId_display": "Status3",
+        "statusId_required": "Status3 is required.",
+        "severityId_display": "Severity3",
+        "severityId_required": "Severity3 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue4Mod3": {
+      "title": "Issue4",
+      "fields": {
+        "projectId_display": "Project4",
+        "projectId_required": "Project4 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category4",
+        "categoryId_required": "Category4 is required.",
+        "statusId_display": "Status4",
+        "statusId_required": "Status4 is required.",
+        "severityId_display": "Severity4",
+        "severityId_required": "Severity4 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue5Mod3": {
+      "title": "Issue5",
+      "fields": {
+        "projectId_display": "Project5",
+        "projectId_required": "Project5 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category5",
+        "categoryId_required": "Category5 is required.",
+        "statusId_display": "Status5",
+        "statusId_required": "Status5 is required.",
+        "severityId_display": "Severity5",
+        "severityId_required": "Severity5 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue6Mod3": {
+      "title": "Issue6",
+      "fields": {
+        "projectId_display": "Project6",
+        "projectId_required": "Project6 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category6",
+        "categoryId_required": "Category6 is required.",
+        "statusId_display": "Status6",
+        "statusId_required": "Status6 is required.",
+        "severityId_display": "Severity6",
+        "severityId_required": "Severity6 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue7Mod3": {
+      "title": "Issue7",
+      "fields": {
+        "projectId_display": "Project7",
+        "projectId_required": "Project7 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category7",
+        "categoryId_required": "Category7 is required.",
+        "statusId_display": "Status7",
+        "statusId_required": "Status7 is required.",
+        "severityId_display": "Severity7",
+        "severityId_required": "Severity7 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue8Mod3": {
+      "title": "Issue8",
+      "fields": {
+        "projectId_display": "Project8",
+        "projectId_required": "Project8 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category8",
+        "categoryId_required": "Category8 is required.",
+        "statusId_display": "Status8",
+        "statusId_required": "Status8 is required.",
+        "severityId_display": "Severity8",
+        "severityId_required": "Severity8 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue9Mod3": {
+      "title": "Issue9",
+      "fields": {
+        "projectId_display": "Project9",
+        "projectId_required": "Project9 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category9",
+        "categoryId_required": "Category9 is required.",
+        "statusId_display": "Status9",
+        "statusId_required": "Status9 is required.",
+        "severityId_display": "Severity9",
+        "severityId_required": "Severity9 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "project10Mod3": {
+      "title": "Project10",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project1Mod3": {
+      "title": "Project1",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project2Mod3": {
+      "title": "Project2",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project3Mod3": {
+      "title": "Project3",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project4Mod3": {
+      "title": "Project4",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project5Mod3": {
+      "title": "Project5",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project6Mod3": {
+      "title": "Project6",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project7Mod3": {
+      "title": "Project7",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project8Mod3": {
+      "title": "Project8",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project9Mod3": {
+      "title": "Project9",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "severity10Mod3": {
+      "title": "Severity10",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity1Mod3": {
+      "title": "Severity1",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity2Mod3": {
+      "title": "Severity2",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity3Mod3": {
+      "title": "Severity3",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity4Mod3": {
+      "title": "Severity4",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity5Mod3": {
+      "title": "Severity5",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity6Mod3": {
+      "title": "Severity6",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity7Mod3": {
+      "title": "Severity7",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity8Mod3": {
+      "title": "Severity8",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity9Mod3": {
+      "title": "Severity9",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status10Mod3": {
+      "title": "Status10",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status1Mod3": {
+      "title": "Status1",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status2Mod3": {
+      "title": "Status2",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status3Mod3": {
+      "title": "Status3",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status4Mod3": {
+      "title": "Status4",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status5Mod3": {
+      "title": "Status5",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status6Mod3": {
+      "title": "Status6",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status7Mod3": {
+      "title": "Status7",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status8Mod3": {
+      "title": "Status8",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status9Mod3": {
+      "title": "Status9",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    }
+  },
+  "mod4": {
+    "category10Mod4": {
+      "title": "Category10",
+      "fields": {
+        "parentId_display": "Category10 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category1Mod4": {
+      "title": "Category1",
+      "fields": {
+        "parentId_display": "Category1 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category2Mod4": {
+      "title": "Category2",
+      "fields": {
+        "parentId_display": "Category2 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category3Mod4": {
+      "title": "Category3",
+      "fields": {
+        "parentId_display": "Category3 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category4Mod4": {
+      "title": "Category4",
+      "fields": {
+        "parentId_display": "Category4 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category5Mod4": {
+      "title": "Category5",
+      "fields": {
+        "parentId_display": "Category5 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category6Mod4": {
+      "title": "Category6",
+      "fields": {
+        "parentId_display": "Category6 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category7Mod4": {
+      "title": "Category7",
+      "fields": {
+        "parentId_display": "Category7 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category8Mod4": {
+      "title": "Category8",
+      "fields": {
+        "parentId_display": "Category8 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category9Mod4": {
+      "title": "Category9",
+      "fields": {
+        "parentId_display": "Category9 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "issue10Mod4": {
+      "title": "Issue10",
+      "fields": {
+        "projectId_display": "Project10",
+        "projectId_required": "Project10 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category10",
+        "categoryId_required": "Category10 is required.",
+        "statusId_display": "Status10",
+        "statusId_required": "Status10 is required.",
+        "severityId_display": "Severity10",
+        "severityId_required": "Severity10 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue1Mod4": {
+      "title": "Issue1",
+      "fields": {
+        "projectId_display": "Project1",
+        "projectId_required": "Project1 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category1",
+        "categoryId_required": "Category1 is required.",
+        "statusId_display": "Status1",
+        "statusId_required": "Status1 is required.",
+        "severityId_display": "Severity1",
+        "severityId_required": "Severity1 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue2Mod4": {
+      "title": "Issue2",
+      "fields": {
+        "projectId_display": "Project2",
+        "projectId_required": "Project2 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category2",
+        "categoryId_required": "Category2 is required.",
+        "statusId_display": "Status2",
+        "statusId_required": "Status2 is required.",
+        "severityId_display": "Severity2",
+        "severityId_required": "Severity2 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue3Mod4": {
+      "title": "Issue3",
+      "fields": {
+        "projectId_display": "Project3",
+        "projectId_required": "Project3 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category3",
+        "categoryId_required": "Category3 is required.",
+        "statusId_display": "Status3",
+        "statusId_required": "Status3 is required.",
+        "severityId_display": "Severity3",
+        "severityId_required": "Severity3 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue4Mod4": {
+      "title": "Issue4",
+      "fields": {
+        "projectId_display": "Project4",
+        "projectId_required": "Project4 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category4",
+        "categoryId_required": "Category4 is required.",
+        "statusId_display": "Status4",
+        "statusId_required": "Status4 is required.",
+        "severityId_display": "Severity4",
+        "severityId_required": "Severity4 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue5Mod4": {
+      "title": "Issue5",
+      "fields": {
+        "projectId_display": "Project5",
+        "projectId_required": "Project5 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category5",
+        "categoryId_required": "Category5 is required.",
+        "statusId_display": "Status5",
+        "statusId_required": "Status5 is required.",
+        "severityId_display": "Severity5",
+        "severityId_required": "Severity5 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue6Mod4": {
+      "title": "Issue6",
+      "fields": {
+        "projectId_display": "Project6",
+        "projectId_required": "Project6 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category6",
+        "categoryId_required": "Category6 is required.",
+        "statusId_display": "Status6",
+        "statusId_required": "Status6 is required.",
+        "severityId_display": "Severity6",
+        "severityId_required": "Severity6 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue7Mod4": {
+      "title": "Issue7",
+      "fields": {
+        "projectId_display": "Project7",
+        "projectId_required": "Project7 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category7",
+        "categoryId_required": "Category7 is required.",
+        "statusId_display": "Status7",
+        "statusId_required": "Status7 is required.",
+        "severityId_display": "Severity7",
+        "severityId_required": "Severity7 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue8Mod4": {
+      "title": "Issue8",
+      "fields": {
+        "projectId_display": "Project8",
+        "projectId_required": "Project8 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category8",
+        "categoryId_required": "Category8 is required.",
+        "statusId_display": "Status8",
+        "statusId_required": "Status8 is required.",
+        "severityId_display": "Severity8",
+        "severityId_required": "Severity8 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue9Mod4": {
+      "title": "Issue9",
+      "fields": {
+        "projectId_display": "Project9",
+        "projectId_required": "Project9 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category9",
+        "categoryId_required": "Category9 is required.",
+        "statusId_display": "Status9",
+        "statusId_required": "Status9 is required.",
+        "severityId_display": "Severity9",
+        "severityId_required": "Severity9 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "project10Mod4": {
+      "title": "Project10",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project1Mod4": {
+      "title": "Project1",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project2Mod4": {
+      "title": "Project2",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project3Mod4": {
+      "title": "Project3",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project4Mod4": {
+      "title": "Project4",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project5Mod4": {
+      "title": "Project5",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project6Mod4": {
+      "title": "Project6",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project7Mod4": {
+      "title": "Project7",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project8Mod4": {
+      "title": "Project8",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project9Mod4": {
+      "title": "Project9",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "severity10Mod4": {
+      "title": "Severity10",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity1Mod4": {
+      "title": "Severity1",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity2Mod4": {
+      "title": "Severity2",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity3Mod4": {
+      "title": "Severity3",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity4Mod4": {
+      "title": "Severity4",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity5Mod4": {
+      "title": "Severity5",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity6Mod4": {
+      "title": "Severity6",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity7Mod4": {
+      "title": "Severity7",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity8Mod4": {
+      "title": "Severity8",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity9Mod4": {
+      "title": "Severity9",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status10Mod4": {
+      "title": "Status10",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status1Mod4": {
+      "title": "Status1",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status2Mod4": {
+      "title": "Status2",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status3Mod4": {
+      "title": "Status3",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status4Mod4": {
+      "title": "Status4",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status5Mod4": {
+      "title": "Status5",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status6Mod4": {
+      "title": "Status6",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status7Mod4": {
+      "title": "Status7",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status8Mod4": {
+      "title": "Status8",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status9Mod4": {
+      "title": "Status9",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    }
+  },
+  "mod5": {
+    "category10Mod5": {
+      "title": "Category10",
+      "fields": {
+        "parentId_display": "Category10 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category1Mod5": {
+      "title": "Category1",
+      "fields": {
+        "parentId_display": "Category1 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category2Mod5": {
+      "title": "Category2",
+      "fields": {
+        "parentId_display": "Category2 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category3Mod5": {
+      "title": "Category3",
+      "fields": {
+        "parentId_display": "Category3 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category4Mod5": {
+      "title": "Category4",
+      "fields": {
+        "parentId_display": "Category4 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category5Mod5": {
+      "title": "Category5",
+      "fields": {
+        "parentId_display": "Category5 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category6Mod5": {
+      "title": "Category6",
+      "fields": {
+        "parentId_display": "Category6 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category7Mod5": {
+      "title": "Category7",
+      "fields": {
+        "parentId_display": "Category7 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category8Mod5": {
+      "title": "Category8",
+      "fields": {
+        "parentId_display": "Category8 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category9Mod5": {
+      "title": "Category9",
+      "fields": {
+        "parentId_display": "Category9 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "issue10Mod5": {
+      "title": "Issue10",
+      "fields": {
+        "projectId_display": "Project10",
+        "projectId_required": "Project10 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category10",
+        "categoryId_required": "Category10 is required.",
+        "statusId_display": "Status10",
+        "statusId_required": "Status10 is required.",
+        "severityId_display": "Severity10",
+        "severityId_required": "Severity10 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue1Mod5": {
+      "title": "Issue1",
+      "fields": {
+        "projectId_display": "Project1",
+        "projectId_required": "Project1 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category1",
+        "categoryId_required": "Category1 is required.",
+        "statusId_display": "Status1",
+        "statusId_required": "Status1 is required.",
+        "severityId_display": "Severity1",
+        "severityId_required": "Severity1 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue2Mod5": {
+      "title": "Issue2",
+      "fields": {
+        "projectId_display": "Project2",
+        "projectId_required": "Project2 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category2",
+        "categoryId_required": "Category2 is required.",
+        "statusId_display": "Status2",
+        "statusId_required": "Status2 is required.",
+        "severityId_display": "Severity2",
+        "severityId_required": "Severity2 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue3Mod5": {
+      "title": "Issue3",
+      "fields": {
+        "projectId_display": "Project3",
+        "projectId_required": "Project3 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category3",
+        "categoryId_required": "Category3 is required.",
+        "statusId_display": "Status3",
+        "statusId_required": "Status3 is required.",
+        "severityId_display": "Severity3",
+        "severityId_required": "Severity3 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue4Mod5": {
+      "title": "Issue4",
+      "fields": {
+        "projectId_display": "Project4",
+        "projectId_required": "Project4 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category4",
+        "categoryId_required": "Category4 is required.",
+        "statusId_display": "Status4",
+        "statusId_required": "Status4 is required.",
+        "severityId_display": "Severity4",
+        "severityId_required": "Severity4 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue5Mod5": {
+      "title": "Issue5",
+      "fields": {
+        "projectId_display": "Project5",
+        "projectId_required": "Project5 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category5",
+        "categoryId_required": "Category5 is required.",
+        "statusId_display": "Status5",
+        "statusId_required": "Status5 is required.",
+        "severityId_display": "Severity5",
+        "severityId_required": "Severity5 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue6Mod5": {
+      "title": "Issue6",
+      "fields": {
+        "projectId_display": "Project6",
+        "projectId_required": "Project6 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category6",
+        "categoryId_required": "Category6 is required.",
+        "statusId_display": "Status6",
+        "statusId_required": "Status6 is required.",
+        "severityId_display": "Severity6",
+        "severityId_required": "Severity6 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue7Mod5": {
+      "title": "Issue7",
+      "fields": {
+        "projectId_display": "Project7",
+        "projectId_required": "Project7 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category7",
+        "categoryId_required": "Category7 is required.",
+        "statusId_display": "Status7",
+        "statusId_required": "Status7 is required.",
+        "severityId_display": "Severity7",
+        "severityId_required": "Severity7 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue8Mod5": {
+      "title": "Issue8",
+      "fields": {
+        "projectId_display": "Project8",
+        "projectId_required": "Project8 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category8",
+        "categoryId_required": "Category8 is required.",
+        "statusId_display": "Status8",
+        "statusId_required": "Status8 is required.",
+        "severityId_display": "Severity8",
+        "severityId_required": "Severity8 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue9Mod5": {
+      "title": "Issue9",
+      "fields": {
+        "projectId_display": "Project9",
+        "projectId_required": "Project9 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category9",
+        "categoryId_required": "Category9 is required.",
+        "statusId_display": "Status9",
+        "statusId_required": "Status9 is required.",
+        "severityId_display": "Severity9",
+        "severityId_required": "Severity9 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "project10Mod5": {
+      "title": "Project10",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project1Mod5": {
+      "title": "Project1",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project2Mod5": {
+      "title": "Project2",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project3Mod5": {
+      "title": "Project3",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project4Mod5": {
+      "title": "Project4",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project5Mod5": {
+      "title": "Project5",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project6Mod5": {
+      "title": "Project6",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project7Mod5": {
+      "title": "Project7",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project8Mod5": {
+      "title": "Project8",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project9Mod5": {
+      "title": "Project9",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "severity10Mod5": {
+      "title": "Severity10",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity1Mod5": {
+      "title": "Severity1",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity2Mod5": {
+      "title": "Severity2",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity3Mod5": {
+      "title": "Severity3",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity4Mod5": {
+      "title": "Severity4",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity5Mod5": {
+      "title": "Severity5",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity6Mod5": {
+      "title": "Severity6",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity7Mod5": {
+      "title": "Severity7",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity8Mod5": {
+      "title": "Severity8",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity9Mod5": {
+      "title": "Severity9",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status10Mod5": {
+      "title": "Status10",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status1Mod5": {
+      "title": "Status1",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status2Mod5": {
+      "title": "Status2",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status3Mod5": {
+      "title": "Status3",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status4Mod5": {
+      "title": "Status4",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status5Mod5": {
+      "title": "Status5",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status6Mod5": {
+      "title": "Status6",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status7Mod5": {
+      "title": "Status7",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status8Mod5": {
+      "title": "Status8",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status9Mod5": {
+      "title": "Status9",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    }
+  },
+  "mod6": {
+    "category10Mod6": {
+      "title": "Category10",
+      "fields": {
+        "parentId_display": "Category10 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category1Mod6": {
+      "title": "Category1",
+      "fields": {
+        "parentId_display": "Category1 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category2Mod6": {
+      "title": "Category2",
+      "fields": {
+        "parentId_display": "Category2 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category3Mod6": {
+      "title": "Category3",
+      "fields": {
+        "parentId_display": "Category3 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category4Mod6": {
+      "title": "Category4",
+      "fields": {
+        "parentId_display": "Category4 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category5Mod6": {
+      "title": "Category5",
+      "fields": {
+        "parentId_display": "Category5 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category6Mod6": {
+      "title": "Category6",
+      "fields": {
+        "parentId_display": "Category6 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category7Mod6": {
+      "title": "Category7",
+      "fields": {
+        "parentId_display": "Category7 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category8Mod6": {
+      "title": "Category8",
+      "fields": {
+        "parentId_display": "Category8 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category9Mod6": {
+      "title": "Category9",
+      "fields": {
+        "parentId_display": "Category9 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "issue10Mod6": {
+      "title": "Issue10",
+      "fields": {
+        "projectId_display": "Project10",
+        "projectId_required": "Project10 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category10",
+        "categoryId_required": "Category10 is required.",
+        "statusId_display": "Status10",
+        "statusId_required": "Status10 is required.",
+        "severityId_display": "Severity10",
+        "severityId_required": "Severity10 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue1Mod6": {
+      "title": "Issue1",
+      "fields": {
+        "projectId_display": "Project1",
+        "projectId_required": "Project1 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category1",
+        "categoryId_required": "Category1 is required.",
+        "statusId_display": "Status1",
+        "statusId_required": "Status1 is required.",
+        "severityId_display": "Severity1",
+        "severityId_required": "Severity1 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue2Mod6": {
+      "title": "Issue2",
+      "fields": {
+        "projectId_display": "Project2",
+        "projectId_required": "Project2 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category2",
+        "categoryId_required": "Category2 is required.",
+        "statusId_display": "Status2",
+        "statusId_required": "Status2 is required.",
+        "severityId_display": "Severity2",
+        "severityId_required": "Severity2 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue3Mod6": {
+      "title": "Issue3",
+      "fields": {
+        "projectId_display": "Project3",
+        "projectId_required": "Project3 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category3",
+        "categoryId_required": "Category3 is required.",
+        "statusId_display": "Status3",
+        "statusId_required": "Status3 is required.",
+        "severityId_display": "Severity3",
+        "severityId_required": "Severity3 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue4Mod6": {
+      "title": "Issue4",
+      "fields": {
+        "projectId_display": "Project4",
+        "projectId_required": "Project4 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category4",
+        "categoryId_required": "Category4 is required.",
+        "statusId_display": "Status4",
+        "statusId_required": "Status4 is required.",
+        "severityId_display": "Severity4",
+        "severityId_required": "Severity4 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue5Mod6": {
+      "title": "Issue5",
+      "fields": {
+        "projectId_display": "Project5",
+        "projectId_required": "Project5 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category5",
+        "categoryId_required": "Category5 is required.",
+        "statusId_display": "Status5",
+        "statusId_required": "Status5 is required.",
+        "severityId_display": "Severity5",
+        "severityId_required": "Severity5 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue6Mod6": {
+      "title": "Issue6",
+      "fields": {
+        "projectId_display": "Project6",
+        "projectId_required": "Project6 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category6",
+        "categoryId_required": "Category6 is required.",
+        "statusId_display": "Status6",
+        "statusId_required": "Status6 is required.",
+        "severityId_display": "Severity6",
+        "severityId_required": "Severity6 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue7Mod6": {
+      "title": "Issue7",
+      "fields": {
+        "projectId_display": "Project7",
+        "projectId_required": "Project7 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category7",
+        "categoryId_required": "Category7 is required.",
+        "statusId_display": "Status7",
+        "statusId_required": "Status7 is required.",
+        "severityId_display": "Severity7",
+        "severityId_required": "Severity7 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue8Mod6": {
+      "title": "Issue8",
+      "fields": {
+        "projectId_display": "Project8",
+        "projectId_required": "Project8 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category8",
+        "categoryId_required": "Category8 is required.",
+        "statusId_display": "Status8",
+        "statusId_required": "Status8 is required.",
+        "severityId_display": "Severity8",
+        "severityId_required": "Severity8 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue9Mod6": {
+      "title": "Issue9",
+      "fields": {
+        "projectId_display": "Project9",
+        "projectId_required": "Project9 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category9",
+        "categoryId_required": "Category9 is required.",
+        "statusId_display": "Status9",
+        "statusId_required": "Status9 is required.",
+        "severityId_display": "Severity9",
+        "severityId_required": "Severity9 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "project10Mod6": {
+      "title": "Project10",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project1Mod6": {
+      "title": "Project1",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project2Mod6": {
+      "title": "Project2",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project3Mod6": {
+      "title": "Project3",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project4Mod6": {
+      "title": "Project4",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project5Mod6": {
+      "title": "Project5",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project6Mod6": {
+      "title": "Project6",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project7Mod6": {
+      "title": "Project7",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project8Mod6": {
+      "title": "Project8",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project9Mod6": {
+      "title": "Project9",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "severity10Mod6": {
+      "title": "Severity10",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity1Mod6": {
+      "title": "Severity1",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity2Mod6": {
+      "title": "Severity2",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity3Mod6": {
+      "title": "Severity3",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity4Mod6": {
+      "title": "Severity4",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity5Mod6": {
+      "title": "Severity5",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity6Mod6": {
+      "title": "Severity6",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity7Mod6": {
+      "title": "Severity7",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity8Mod6": {
+      "title": "Severity8",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity9Mod6": {
+      "title": "Severity9",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status10Mod6": {
+      "title": "Status10",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status1Mod6": {
+      "title": "Status1",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status2Mod6": {
+      "title": "Status2",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status3Mod6": {
+      "title": "Status3",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status4Mod6": {
+      "title": "Status4",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status5Mod6": {
+      "title": "Status5",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status6Mod6": {
+      "title": "Status6",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status7Mod6": {
+      "title": "Status7",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status8Mod6": {
+      "title": "Status8",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status9Mod6": {
+      "title": "Status9",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    }
+  },
+  "mod7": {
+    "category10Mod7": {
+      "title": "Category10",
+      "fields": {
+        "parentId_display": "Category10 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category1Mod7": {
+      "title": "Category1",
+      "fields": {
+        "parentId_display": "Category1 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category2Mod7": {
+      "title": "Category2",
+      "fields": {
+        "parentId_display": "Category2 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category3Mod7": {
+      "title": "Category3",
+      "fields": {
+        "parentId_display": "Category3 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category4Mod7": {
+      "title": "Category4",
+      "fields": {
+        "parentId_display": "Category4 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category5Mod7": {
+      "title": "Category5",
+      "fields": {
+        "parentId_display": "Category5 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category6Mod7": {
+      "title": "Category6",
+      "fields": {
+        "parentId_display": "Category6 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category7Mod7": {
+      "title": "Category7",
+      "fields": {
+        "parentId_display": "Category7 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category8Mod7": {
+      "title": "Category8",
+      "fields": {
+        "parentId_display": "Category8 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category9Mod7": {
+      "title": "Category9",
+      "fields": {
+        "parentId_display": "Category9 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "issue10Mod7": {
+      "title": "Issue10",
+      "fields": {
+        "projectId_display": "Project10",
+        "projectId_required": "Project10 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category10",
+        "categoryId_required": "Category10 is required.",
+        "statusId_display": "Status10",
+        "statusId_required": "Status10 is required.",
+        "severityId_display": "Severity10",
+        "severityId_required": "Severity10 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue1Mod7": {
+      "title": "Issue1",
+      "fields": {
+        "projectId_display": "Project1",
+        "projectId_required": "Project1 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category1",
+        "categoryId_required": "Category1 is required.",
+        "statusId_display": "Status1",
+        "statusId_required": "Status1 is required.",
+        "severityId_display": "Severity1",
+        "severityId_required": "Severity1 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue2Mod7": {
+      "title": "Issue2",
+      "fields": {
+        "projectId_display": "Project2",
+        "projectId_required": "Project2 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category2",
+        "categoryId_required": "Category2 is required.",
+        "statusId_display": "Status2",
+        "statusId_required": "Status2 is required.",
+        "severityId_display": "Severity2",
+        "severityId_required": "Severity2 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue3Mod7": {
+      "title": "Issue3",
+      "fields": {
+        "projectId_display": "Project3",
+        "projectId_required": "Project3 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category3",
+        "categoryId_required": "Category3 is required.",
+        "statusId_display": "Status3",
+        "statusId_required": "Status3 is required.",
+        "severityId_display": "Severity3",
+        "severityId_required": "Severity3 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue4Mod7": {
+      "title": "Issue4",
+      "fields": {
+        "projectId_display": "Project4",
+        "projectId_required": "Project4 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category4",
+        "categoryId_required": "Category4 is required.",
+        "statusId_display": "Status4",
+        "statusId_required": "Status4 is required.",
+        "severityId_display": "Severity4",
+        "severityId_required": "Severity4 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue5Mod7": {
+      "title": "Issue5",
+      "fields": {
+        "projectId_display": "Project5",
+        "projectId_required": "Project5 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category5",
+        "categoryId_required": "Category5 is required.",
+        "statusId_display": "Status5",
+        "statusId_required": "Status5 is required.",
+        "severityId_display": "Severity5",
+        "severityId_required": "Severity5 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue6Mod7": {
+      "title": "Issue6",
+      "fields": {
+        "projectId_display": "Project6",
+        "projectId_required": "Project6 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category6",
+        "categoryId_required": "Category6 is required.",
+        "statusId_display": "Status6",
+        "statusId_required": "Status6 is required.",
+        "severityId_display": "Severity6",
+        "severityId_required": "Severity6 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue7Mod7": {
+      "title": "Issue7",
+      "fields": {
+        "projectId_display": "Project7",
+        "projectId_required": "Project7 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category7",
+        "categoryId_required": "Category7 is required.",
+        "statusId_display": "Status7",
+        "statusId_required": "Status7 is required.",
+        "severityId_display": "Severity7",
+        "severityId_required": "Severity7 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue8Mod7": {
+      "title": "Issue8",
+      "fields": {
+        "projectId_display": "Project8",
+        "projectId_required": "Project8 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category8",
+        "categoryId_required": "Category8 is required.",
+        "statusId_display": "Status8",
+        "statusId_required": "Status8 is required.",
+        "severityId_display": "Severity8",
+        "severityId_required": "Severity8 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue9Mod7": {
+      "title": "Issue9",
+      "fields": {
+        "projectId_display": "Project9",
+        "projectId_required": "Project9 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category9",
+        "categoryId_required": "Category9 is required.",
+        "statusId_display": "Status9",
+        "statusId_required": "Status9 is required.",
+        "severityId_display": "Severity9",
+        "severityId_required": "Severity9 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "project10Mod7": {
+      "title": "Project10",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project1Mod7": {
+      "title": "Project1",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project2Mod7": {
+      "title": "Project2",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project3Mod7": {
+      "title": "Project3",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project4Mod7": {
+      "title": "Project4",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project5Mod7": {
+      "title": "Project5",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project6Mod7": {
+      "title": "Project6",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project7Mod7": {
+      "title": "Project7",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project8Mod7": {
+      "title": "Project8",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project9Mod7": {
+      "title": "Project9",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "severity10Mod7": {
+      "title": "Severity10",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity1Mod7": {
+      "title": "Severity1",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity2Mod7": {
+      "title": "Severity2",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity3Mod7": {
+      "title": "Severity3",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity4Mod7": {
+      "title": "Severity4",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity5Mod7": {
+      "title": "Severity5",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity6Mod7": {
+      "title": "Severity6",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity7Mod7": {
+      "title": "Severity7",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity8Mod7": {
+      "title": "Severity8",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity9Mod7": {
+      "title": "Severity9",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status10Mod7": {
+      "title": "Status10",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status1Mod7": {
+      "title": "Status1",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status2Mod7": {
+      "title": "Status2",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status3Mod7": {
+      "title": "Status3",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status4Mod7": {
+      "title": "Status4",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status5Mod7": {
+      "title": "Status5",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status6Mod7": {
+      "title": "Status6",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status7Mod7": {
+      "title": "Status7",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status8Mod7": {
+      "title": "Status8",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status9Mod7": {
+      "title": "Status9",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    }
+  },
+  "mod8": {
+    "category10Mod8": {
+      "title": "Category10",
+      "fields": {
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "parentId_display": "Category10 parent",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category1Mod8": {
+      "title": "Category1",
+      "fields": {
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "parentId_display": "Category1 parent",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category2Mod8": {
+      "title": "Category2",
+      "fields": {
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "parentId_display": "Category2 parent",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category3Mod8": {
+      "title": "Category3",
+      "fields": {
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "parentId_display": "Category3 parent",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category4Mod8": {
+      "title": "Category4",
+      "fields": {
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "parentId_display": "Category4 parent",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category5Mod8": {
+      "title": "Category5",
+      "fields": {
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "parentId_display": "Category5 parent",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category6Mod8": {
+      "title": "Category6",
+      "fields": {
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "parentId_display": "Category6 parent",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category7Mod8": {
+      "title": "Category7",
+      "fields": {
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "parentId_display": "Category7 parent",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category8Mod8": {
+      "title": "Category8",
+      "fields": {
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "parentId_display": "Category8 parent",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category9Mod8": {
+      "title": "Category9",
+      "fields": {
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "parentId_display": "Category9 parent",
+        "recursiveName_display": "Path"
+      }
+    },
+    "issue10Mod8": {
+      "title": "Issue10",
+      "fields": {
+        "description_display": "Description",
+        "description_required": "Description is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "projectId_display": "Project10",
+        "projectId_required": "Project10 is required.",
+        "categoryId_display": "Category10",
+        "categoryId_required": "Category10 is required.",
+        "statusId_display": "Status10",
+        "statusId_required": "Status10 is required.",
+        "severityId_display": "Severity10",
+        "severityId_required": "Severity10 is required."
+      }
+    },
+    "issue1Mod8": {
+      "title": "Issue1",
+      "fields": {
+        "description_display": "Description",
+        "description_required": "Description is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category1",
+        "categoryId_required": "Category1 is required.",
+        "statusId_display": "Status1",
+        "statusId_required": "Status1 is required.",
+        "projectId_display": "Project1",
+        "projectId_required": "Project1 is required.",
+        "severityId_display": "Severity1",
+        "severityId_required": "Severity1 is required."
+      }
+    },
+    "issue2Mod8": {
+      "title": "Issue2",
+      "fields": {
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "description_display": "Description",
+        "description_required": "Description is required.",
+        "severityId_display": "Severity2",
+        "severityId_required": "Severity2 is required.",
+        "projectId_display": "Project2",
+        "projectId_required": "Project2 is required.",
+        "categoryId_display": "Category2",
+        "categoryId_required": "Category2 is required.",
+        "statusId_display": "Status2",
+        "statusId_required": "Status2 is required."
+      }
+    },
+    "issue3Mod8": {
+      "title": "Issue3",
+      "fields": {
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "description_display": "Description",
+        "description_required": "Description is required.",
+        "projectId_display": "Project3",
+        "projectId_required": "Project3 is required.",
+        "severityId_display": "Severity3",
+        "severityId_required": "Severity3 is required.",
+        "categoryId_display": "Category3",
+        "categoryId_required": "Category3 is required.",
+        "statusId_display": "Status3",
+        "statusId_required": "Status3 is required."
+      }
+    },
+    "issue4Mod8": {
+      "title": "Issue4",
+      "fields": {
+        "description_display": "Description",
+        "description_required": "Description is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "projectId_display": "Project4",
+        "projectId_required": "Project4 is required.",
+        "categoryId_display": "Category4",
+        "categoryId_required": "Category4 is required.",
+        "statusId_display": "Status4",
+        "statusId_required": "Status4 is required.",
+        "severityId_display": "Severity4",
+        "severityId_required": "Severity4 is required."
+      }
+    },
+    "issue5Mod8": {
+      "title": "Issue5",
+      "fields": {
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "description_display": "Description",
+        "description_required": "Description is required.",
+        "projectId_display": "Project5",
+        "projectId_required": "Project5 is required.",
+        "categoryId_display": "Category5",
+        "categoryId_required": "Category5 is required.",
+        "statusId_display": "Status5",
+        "statusId_required": "Status5 is required.",
+        "severityId_display": "Severity5",
+        "severityId_required": "Severity5 is required."
+      }
+    },
+    "issue6Mod8": {
+      "title": "Issue6",
+      "fields": {
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "description_display": "Description",
+        "description_required": "Description is required.",
+        "severityId_display": "Severity6",
+        "severityId_required": "Severity6 is required.",
+        "projectId_display": "Project6",
+        "projectId_required": "Project6 is required.",
+        "categoryId_display": "Category6",
+        "categoryId_required": "Category6 is required.",
+        "statusId_display": "Status6",
+        "statusId_required": "Status6 is required."
+      }
+    },
+    "issue7Mod8": {
+      "title": "Issue7",
+      "fields": {
+        "description_display": "Description",
+        "description_required": "Description is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "severityId_display": "Severity7",
+        "severityId_required": "Severity7 is required.",
+        "categoryId_display": "Category7",
+        "categoryId_required": "Category7 is required.",
+        "projectId_display": "Project7",
+        "projectId_required": "Project7 is required.",
+        "statusId_display": "Status7",
+        "statusId_required": "Status7 is required."
+      }
+    },
+    "issue8Mod8": {
+      "title": "Issue8",
+      "fields": {
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "description_display": "Description",
+        "description_required": "Description is required.",
+        "categoryId_display": "Category8",
+        "categoryId_required": "Category8 is required.",
+        "projectId_display": "Project8",
+        "projectId_required": "Project8 is required.",
+        "statusId_display": "Status8",
+        "statusId_required": "Status8 is required.",
+        "severityId_display": "Severity8",
+        "severityId_required": "Severity8 is required."
+      }
+    },
+    "issue9Mod8": {
+      "title": "Issue9",
+      "fields": {
+        "description_display": "Description",
+        "description_required": "Description is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "severityId_display": "Severity9",
+        "severityId_required": "Severity9 is required.",
+        "categoryId_display": "Category9",
+        "categoryId_required": "Category9 is required.",
+        "projectId_display": "Project9",
+        "projectId_required": "Project9 is required.",
+        "statusId_display": "Status9",
+        "statusId_required": "Status9 is required."
+      }
+    },
+    "project10Mod8": {
+      "title": "Project10",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project1Mod8": {
+      "title": "Project1",
+      "fields": {
+        "enabled_display": "Enabled",
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required."
+      }
+    },
+    "project2Mod8": {
+      "title": "Project2",
+      "fields": {
+        "enabled_display": "Enabled",
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required."
+      }
+    },
+    "project3Mod8": {
+      "title": "Project3",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project4Mod8": {
+      "title": "Project4",
+      "fields": {
+        "enabled_display": "Enabled",
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required."
+      }
+    },
+    "project5Mod8": {
+      "title": "Project5",
+      "fields": {
+        "enabled_display": "Enabled",
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required."
+      }
+    },
+    "project6Mod8": {
+      "title": "Project6",
+      "fields": {
+        "enabled_display": "Enabled",
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required."
+      }
+    },
+    "project7Mod8": {
+      "title": "Project7",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project8Mod8": {
+      "title": "Project8",
+      "fields": {
+        "enabled_display": "Enabled",
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required."
+      }
+    },
+    "project9Mod8": {
+      "title": "Project9",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "severity10Mod8": {
+      "title": "Severity10",
+      "fields": {
+        "description_display": "Description",
+        "description_required": "Description is required.",
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id."
+      }
+    },
+    "severity1Mod8": {
+      "title": "Severity1",
+      "fields": {
+        "description_display": "Description",
+        "description_required": "Description is required.",
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id."
+      }
+    },
+    "severity2Mod8": {
+      "title": "Severity2",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity3Mod8": {
+      "title": "Severity3",
+      "fields": {
+        "description_display": "Description",
+        "description_required": "Description is required.",
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id."
+      }
+    },
+    "severity4Mod8": {
+      "title": "Severity4",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity5Mod8": {
+      "title": "Severity5",
+      "fields": {
+        "description_display": "Description",
+        "description_required": "Description is required.",
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id."
+      }
+    },
+    "severity6Mod8": {
+      "title": "Severity6",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity7Mod8": {
+      "title": "Severity7",
+      "fields": {
+        "description_display": "Description",
+        "description_required": "Description is required.",
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id."
+      }
+    },
+    "severity8Mod8": {
+      "title": "Severity8",
+      "fields": {
+        "description_display": "Description",
+        "description_required": "Description is required.",
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id."
+      }
+    },
+    "severity9Mod8": {
+      "title": "Severity9",
+      "fields": {
+        "description_display": "Description",
+        "description_required": "Description is required.",
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id."
+      }
+    },
+    "status10Mod8": {
+      "title": "Status10",
+      "fields": {
+        "description_display": "Description",
+        "description_required": "Description is required.",
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id."
+      }
+    },
+    "status1Mod8": {
+      "title": "Status1",
+      "fields": {
+        "description_display": "Description",
+        "description_required": "Description is required.",
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id."
+      }
+    },
+    "status2Mod8": {
+      "title": "Status2",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status3Mod8": {
+      "title": "Status3",
+      "fields": {
+        "description_display": "Description",
+        "description_required": "Description is required.",
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id."
+      }
+    },
+    "status4Mod8": {
+      "title": "Status4",
+      "fields": {
+        "description_display": "Description",
+        "description_required": "Description is required.",
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id."
+      }
+    },
+    "status5Mod8": {
+      "title": "Status5",
+      "fields": {
+        "description_display": "Description",
+        "description_required": "Description is required.",
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id."
+      }
+    },
+    "status6Mod8": {
+      "title": "Status6",
+      "fields": {
+        "description_display": "Description",
+        "description_required": "Description is required.",
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id."
+      }
+    },
+    "status7Mod8": {
+      "title": "Status7",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status8Mod8": {
+      "title": "Status8",
+      "fields": {
+        "description_display": "Description",
+        "description_required": "Description is required.",
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id."
+      }
+    },
+    "status9Mod8": {
+      "title": "Status9",
+      "fields": {
+        "description_display": "Description",
+        "description_required": "Description is required.",
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id."
+      }
+    }
+  },
+  "mod9": {
+    "category10Mod9": {
+      "title": "Category10",
+      "fields": {
+        "parentId_display": "Category10 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category1Mod9": {
+      "title": "Category1",
+      "fields": {
+        "parentId_display": "Category1 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category2Mod9": {
+      "title": "Category2",
+      "fields": {
+        "parentId_display": "Category2 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category3Mod9": {
+      "title": "Category3",
+      "fields": {
+        "parentId_display": "Category3 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category4Mod9": {
+      "title": "Category4",
+      "fields": {
+        "parentId_display": "Category4 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category5Mod9": {
+      "title": "Category5",
+      "fields": {
+        "parentId_display": "Category5 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category6Mod9": {
+      "title": "Category6",
+      "fields": {
+        "parentId_display": "Category6 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category7Mod9": {
+      "title": "Category7",
+      "fields": {
+        "parentId_display": "Category7 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category8Mod9": {
+      "title": "Category8",
+      "fields": {
+        "parentId_display": "Category8 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "category9Mod9": {
+      "title": "Category9",
+      "fields": {
+        "parentId_display": "Category9 parent",
+        "categoryName_display": "Category name",
+        "categoryName_required": "Category name is required.",
+        "recursiveName_display": "Path"
+      }
+    },
+    "issue10Mod9": {
+      "title": "Issue10",
+      "fields": {
+        "projectId_display": "Project10",
+        "projectId_required": "Project10 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category10",
+        "categoryId_required": "Category10 is required.",
+        "statusId_display": "Status10",
+        "statusId_required": "Status10 is required.",
+        "severityId_display": "Severity10",
+        "severityId_required": "Severity10 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue1Mod9": {
+      "title": "Issue1",
+      "fields": {
+        "projectId_display": "Project1",
+        "projectId_required": "Project1 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category1",
+        "categoryId_required": "Category1 is required.",
+        "statusId_display": "Status1",
+        "statusId_required": "Status1 is required.",
+        "severityId_display": "Severity1",
+        "severityId_required": "Severity1 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue2Mod9": {
+      "title": "Issue2",
+      "fields": {
+        "projectId_display": "Project2",
+        "projectId_required": "Project2 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category2",
+        "categoryId_required": "Category2 is required.",
+        "statusId_display": "Status2",
+        "statusId_required": "Status2 is required.",
+        "severityId_display": "Severity2",
+        "severityId_required": "Severity2 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue3Mod9": {
+      "title": "Issue3",
+      "fields": {
+        "projectId_display": "Project3",
+        "projectId_required": "Project3 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category3",
+        "categoryId_required": "Category3 is required.",
+        "statusId_display": "Status3",
+        "statusId_required": "Status3 is required.",
+        "severityId_display": "Severity3",
+        "severityId_required": "Severity3 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue4Mod9": {
+      "title": "Issue4",
+      "fields": {
+        "projectId_display": "Project4",
+        "projectId_required": "Project4 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category4",
+        "categoryId_required": "Category4 is required.",
+        "statusId_display": "Status4",
+        "statusId_required": "Status4 is required.",
+        "severityId_display": "Severity4",
+        "severityId_required": "Severity4 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue5Mod9": {
+      "title": "Issue5",
+      "fields": {
+        "projectId_display": "Project5",
+        "projectId_required": "Project5 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category5",
+        "categoryId_required": "Category5 is required.",
+        "statusId_display": "Status5",
+        "statusId_required": "Status5 is required.",
+        "severityId_display": "Severity5",
+        "severityId_required": "Severity5 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue6Mod9": {
+      "title": "Issue6",
+      "fields": {
+        "projectId_display": "Project6",
+        "projectId_required": "Project6 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category6",
+        "categoryId_required": "Category6 is required.",
+        "statusId_display": "Status6",
+        "statusId_required": "Status6 is required.",
+        "severityId_display": "Severity6",
+        "severityId_required": "Severity6 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue7Mod9": {
+      "title": "Issue7",
+      "fields": {
+        "projectId_display": "Project7",
+        "projectId_required": "Project7 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category7",
+        "categoryId_required": "Category7 is required.",
+        "statusId_display": "Status7",
+        "statusId_required": "Status7 is required.",
+        "severityId_display": "Severity7",
+        "severityId_required": "Severity7 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue8Mod9": {
+      "title": "Issue8",
+      "fields": {
+        "projectId_display": "Project8",
+        "projectId_required": "Project8 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category8",
+        "categoryId_required": "Category8 is required.",
+        "statusId_display": "Status8",
+        "statusId_required": "Status8 is required.",
+        "severityId_display": "Severity8",
+        "severityId_required": "Severity8 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "issue9Mod9": {
+      "title": "Issue9",
+      "fields": {
+        "projectId_display": "Project9",
+        "projectId_required": "Project9 is required.",
+        "title_display": "Title",
+        "title_required": "Title is required.",
+        "categoryId_display": "Category9",
+        "categoryId_required": "Category9 is required.",
+        "statusId_display": "Status9",
+        "statusId_required": "Status9 is required.",
+        "severityId_display": "Severity9",
+        "severityId_required": "Severity9 is required.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "project10Mod9": {
+      "title": "Project10",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project1Mod9": {
+      "title": "Project1",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project2Mod9": {
+      "title": "Project2",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project3Mod9": {
+      "title": "Project3",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project4Mod9": {
+      "title": "Project4",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project5Mod9": {
+      "title": "Project5",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project6Mod9": {
+      "title": "Project6",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project7Mod9": {
+      "title": "Project7",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project8Mod9": {
+      "title": "Project8",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "project9Mod9": {
+      "title": "Project9",
+      "fields": {
+        "projectName_display": "Project name",
+        "projectName_required": "Project name is required.",
+        "enabled_display": "Enabled"
+      }
+    },
+    "severity10Mod9": {
+      "title": "Severity10",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity1Mod9": {
+      "title": "Severity1",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity2Mod9": {
+      "title": "Severity2",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity3Mod9": {
+      "title": "Severity3",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity4Mod9": {
+      "title": "Severity4",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity5Mod9": {
+      "title": "Severity5",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity6Mod9": {
+      "title": "Severity6",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity7Mod9": {
+      "title": "Severity7",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity8Mod9": {
+      "title": "Severity8",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "severity9Mod9": {
+      "title": "Severity9",
+      "fields": {
+        "severityId_display": "Severity id",
+        "severityId_required": "Severity id is required.",
+        "severityId_invalid": "Invalid severity id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status10Mod9": {
+      "title": "Status10",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status1Mod9": {
+      "title": "Status1",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status2Mod9": {
+      "title": "Status2",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status3Mod9": {
+      "title": "Status3",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status4Mod9": {
+      "title": "Status4",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status5Mod9": {
+      "title": "Status5",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status6Mod9": {
+      "title": "Status6",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status7Mod9": {
+      "title": "Status7",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status8Mod9": {
+      "title": "Status8",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    },
+    "status9Mod9": {
+      "title": "Status9",
+      "fields": {
+        "statusId_display": "Status id",
+        "statusId_required": "Status id is required.",
+        "statusId_invalid": "Invalid status id.",
+        "description_display": "Description",
+        "description_required": "Description is required."
+      }
+    }
+  }
+}

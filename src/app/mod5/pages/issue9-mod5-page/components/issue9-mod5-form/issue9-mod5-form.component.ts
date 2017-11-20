@@ -1,0 +1,126 @@
+﻿import { Component, ViewChild, Input, Output, EventEmitter, OnInit, OnDestroy } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { Subject } from 'rxjs/Subject';
+import 'rxjs/add/operator/takeUntil';
+
+import { CustomValidators } from 'ng2-validation';
+import { AuthService } from './../../../../../shared/services/auth.service';
+import { HelperService } from './../../../../../shared/services/helper.service';
+import { SettingsService } from './../../../../../shared/services/settings.service';
+import { FormComponent } from './../../../../../shared/components/form/form.component';
+
+import { Project9Mod5Service } from './../../../../services/project9-mod5.service';
+import { Category9Mod5Service } from './../../../../services/category9-mod5.service';
+import { Status9Mod5Service } from './../../../../services/status9-mod5.service';
+import { Severity9Mod5Service } from './../../../../services/severity9-mod5.service';
+import { Issue9Mod5Service } from './../../../../services/issue9-mod5.service';
+import { Issue9Mod5 } from './../../../../models/issue9-mod5';
+
+@Component({
+  selector: 'app-mod5-issue9-mod5-form',
+  templateUrl: './issue9-mod5-form.component.html'
+})
+export class Issue9Mod5FormComponent extends FormComponent implements OnInit, OnDestroy {
+
+  private ngUnsubscribe: Subject<void> = new Subject<void>();
+
+  public formGroup: FormGroup;
+
+  @Input() newRecord: boolean;
+  @Input() item: Issue9Mod5;
+
+  @Output() gridRefreshEventEmitter: EventEmitter<any> = new EventEmitter();
+
+  constructor(
+    private router: Router,
+    private fb: FormBuilder,
+    authService: AuthService,
+    settingsService: SettingsService,
+    private helperService: HelperService,
+    private project9Mod5Service: Project9Mod5Service,
+    private category9Mod5Service: Category9Mod5Service,
+    private status9Mod5Service: Status9Mod5Service,
+    private severity9Mod5Service: Severity9Mod5Service,
+    private issue9Mod5Service: Issue9Mod5Service) {
+    super(authService, settingsService);
+  }
+
+  ngOnInit() {
+    this.loadSelects();
+    this.buildFormGroup();
+  }
+
+  ngOnDestroy() {
+    this.ngUnsubscribe.next();
+    this.ngUnsubscribe.complete();
+  }
+
+  private buildFormGroup(): void {
+    this.formGroup = this.fb.group({
+      issueId: [this.item.issueId, []],
+      projectId: [super.toString(this.item.projectId), [Validators.required]],
+      title: [this.item.title, [Validators.required]],
+      categoryId: [super.toString(this.item.categoryId), [Validators.required]],
+      statusId: [super.toString(this.item.statusId), [Validators.required]],
+      severityId: [super.toString(this.item.severityId), [Validators.required]],
+      description: [this.item.description, [Validators.required]]
+    });
+  }
+
+  public back(): void {
+    this.router.navigate(['/mod5/issue9-mod5']);
+  }
+
+  public save(): void {
+    this.submitted = true;
+    if (this.formGroup.valid) {
+      this.isLoading = true;
+      const item = this.formGroup.value;
+      this.issue9Mod5Service
+        .save(this.newRecord, item)
+        .takeUntil(this.ngUnsubscribe)
+        .subscribe(result => {
+          if (result.isValid) {
+            this.helperService.message.success(result);
+            this.gridRefreshEventEmitter.emit(null);
+            setTimeout(() => { this.back(); }, 0);
+          } else {
+            this.helperService.message.error(result);
+          }
+          this.isLoading = false;
+        });
+    }
+  }
+
+  private loadSelects(): void {
+    this.project9Mod5Service
+      .getSelectList()
+      .takeUntil(this.ngUnsubscribe)
+      .subscribe(items => {
+        this.selects.itemsProject9Mod5 = items;
+      });
+
+    this.category9Mod5Service
+      .getSelectList()
+      .takeUntil(this.ngUnsubscribe)
+      .subscribe(items => {
+        this.selects.itemsCategory9Mod5 = items;
+      });
+
+    this.status9Mod5Service
+      .getSelectList()
+      .takeUntil(this.ngUnsubscribe)
+      .subscribe(items => {
+        this.selects.itemsStatus9Mod5 = items;
+      });
+
+    this.severity9Mod5Service
+      .getSelectList()
+      .takeUntil(this.ngUnsubscribe)
+      .subscribe(items => {
+        this.selects.itemsSeverity9Mod5 = items;
+      });
+  }
+
+}

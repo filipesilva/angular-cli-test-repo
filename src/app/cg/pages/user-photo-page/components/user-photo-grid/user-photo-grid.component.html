@@ -1,0 +1,47 @@
+﻿<table class="table table-responsive table-striped table-vcenter">
+  <colgroup>
+    <col style="width: 33%" />
+    <col style="width: 20%" />
+    <col style="width: 15%" />
+    <col style="width: 20%" />
+    <col style="width: 12%" class="hidden-print" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th class="sorting" (click)="order('fileName')" [ngClass]="checkClass('fileName')">
+        {{ "cg.userPhoto.fields.fileName_display" | translate }}
+      </th>
+      <th class="sorting" (click)="order('contentType')" [ngClass]="checkClass('contentType')">
+        {{ "cg.userPhoto.fields.contentType_display" | translate }}
+      </th>
+      <th class="sorting" (click)="order('fileSize')" [ngClass]="checkClass('fileSize')">
+        {{ "cg.userPhoto.fields.fileSize_display" | translate }}
+      </th>
+      <th>
+        {{ "cg.userPhoto.fields.photo_display" | translate }}
+      </th>
+      <th class="text-center hidden-print"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of items" (dblclick)="edit(item.idUser)">
+      <td>{{ item.fileName }}</td>
+      <td>{{ item.contentType }}</td>
+      <td>{{ item.fileSize | number:"1.0-0" }}</td>
+      <td>
+        <a href="javascript: void(0)" (click)="download(item.idUser, 'Photo', item.fileName)">{{ item.fileName }}</a>
+      </td>
+      <td class="text-center hidden-print">
+        <button class="btn btn-sm btn-outline-success mr-2" [title]="'shared.buttons.edit' | translate" [disabled]="!hasPermission('cg.user.save')" (click)="edit(item.idUser)">
+          <i class="fa fa-pencil"></i>
+        </button>
+        <button class="btn btn-sm btn-outline-danger mr-2" [title]="'shared.buttons.delete' | translate" [disabled]="!hasPermission('cg.user.delete')" (click)="confirmDelete(item.idUser)">
+          <i class="fa fa-trash-o"></i>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<app-grid-pagination [grid]="this"></app-grid-pagination>
+<app-loading-indicator [isRunning]="isFirstLoading" [layout]="'mode1'"></app-loading-indicator>
+<app-modal-delete #modalDelete></app-modal-delete>

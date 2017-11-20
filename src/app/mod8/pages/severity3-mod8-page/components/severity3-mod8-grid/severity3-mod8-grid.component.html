@@ -1,0 +1,35 @@
+﻿<table class="table table-responsive table-striped table-vcenter">
+  <colgroup>
+    <col style="width: 15%" />
+    <col style="width: 73%" />
+    <col style="width: 12%" class="hidden-print" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th class="sorting" (click)="order('severityId')" [ngClass]="checkClass('severityId')">
+        {{ "mod8.severity3Mod8.fields.severityId_display" | translate }}
+      </th>
+      <th class="sorting" (click)="order('description')" [ngClass]="checkClass('description')">
+        {{ "mod8.severity3Mod8.fields.description_display" | translate }}
+      </th>
+      <th class="text-center hidden-print"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of items" (dblclick)="edit(item.severityId)">
+      <td>{{ item.severityId | number:"1.0-0" }}</td>
+      <td>{{ item.description }}</td>
+      <td class="text-center hidden-print">
+        <button class="btn btn-sm btn-outline-success mr-2" [title]="'shared.buttons.edit' | translate" [disabled]="!hasPermission('mod8.severity3Mod8.save')" (click)="edit(item.severityId)">
+          <i class="fa fa-pencil"></i>
+        </button>
+        <button class="btn btn-sm btn-outline-danger mr-2" [title]="'shared.buttons.delete' | translate" [disabled]="!hasPermission('mod8.severity3Mod8.delete')" (click)="confirmDelete(item.severityId)">
+          <i class="fa fa-trash-o"></i>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<app-grid-pagination [grid]="this"></app-grid-pagination>
+<app-loading-indicator [isRunning]="isFirstLoading" [layout]="'mode1'"></app-loading-indicator>
+<app-modal-delete #modalDelete></app-modal-delete>

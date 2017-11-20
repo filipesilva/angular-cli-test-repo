@@ -1,0 +1,46 @@
+﻿<form novalidate [formGroup]="formGroup">
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <label>*{{ "cg.culture.fields.cultureName_display" | translate }}:</label>
+      <input type="text" class="form-control" [ngClass]="{'is-invalid': isInvalid(formGroup, 'cultureName')}" maxlength="100" formControlName="cultureName" required />
+      <div class="invalid-feedback" *ngIf="hasError(formGroup, 'cultureName', 'required')">{{ "cg.culture.fields.cultureName_required" | translate }}</div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label>*{{ "cg.culture.fields.cultureKey_display" | translate }}:</label>
+      <input type="text" class="form-control" [ngClass]="{'is-invalid': isInvalid(formGroup, 'cultureKey')}" maxlength="10" formControlName="cultureKey" required />
+      <div class="invalid-feedback" *ngIf="hasError(formGroup, 'cultureKey', 'required')">{{ "cg.culture.fields.cultureKey_required" | translate }}</div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label>*{{ "cg.culture.fields.exhibitionName_display" | translate }}:</label>
+      <input type="text" class="form-control" [ngClass]="{'is-invalid': isInvalid(formGroup, 'exhibitionName')}" maxlength="100" formControlName="exhibitionName" required />
+      <div class="invalid-feedback" *ngIf="hasError(formGroup, 'exhibitionName', 'required')">{{ "cg.culture.fields.exhibitionName_required" | translate }}</div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label>*{{ "cg.culture.fields.dateFormat_display" | translate }}:</label>
+      <input type="text" class="form-control" [ngClass]="{'is-invalid': isInvalid(formGroup, 'dateFormat')}" maxlength="10" formControlName="dateFormat" required />
+      <div class="invalid-feedback" *ngIf="hasError(formGroup, 'dateFormat', 'required')">{{ "cg.culture.fields.dateFormat_required" | translate }}</div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label>*{{ "cg.culture.fields.decimalFormat_display" | translate }}:</label>
+      <input type="text" class="form-control" [ngClass]="{'is-invalid': isInvalid(formGroup, 'decimalFormat')}" maxlength="1" formControlName="decimalFormat" required />
+      <div class="invalid-feedback" *ngIf="hasError(formGroup, 'decimalFormat', 'required')">{{ "cg.culture.fields.decimalFormat_required" | translate }}</div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label>{{ "cg.culture.fields.enabled_display" | translate }}:</label>
+      <br />
+      <label class="switch switch-default switch-primary">
+        <input type="checkbox" class="switch-input" formControlName="enabled" />
+        <span class="switch-label"></span>
+        <span class="switch-handle"></span>
+      </label>
+    </div>
+  </div>
+  <div class="form-actions">
+    <button type="button" class="btn btn-primary mr-2" [ladda]="isLoading" [disabled]="!hasPermission('cg.culture.save')" (click)="save()">
+      {{ "shared.buttons.save" | translate }}
+    </button>
+    <button type="button" class="btn btn-default mr-2" (click)="back()">
+      {{ "shared.buttons.cancel" | translate }}
+    </button>
+  </div>
+</form>

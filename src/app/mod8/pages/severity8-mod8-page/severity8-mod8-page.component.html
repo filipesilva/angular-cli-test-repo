@@ -1,0 +1,67 @@
+﻿<!-- Grid -->
+<div [hidden]="item">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <i class="fa fa-align-justify"></i> {{ "mod8.severity8Mod8.title" | translate }}
+          <div class="card-actions">
+            <app-loading-indicator [isRunning]="grid.isLoading" [layout]="'mode2'"></app-loading-indicator>
+          </div>
+        </div>
+        <div class="card-block">
+          <div class="row mb10">
+            <div class="col-sm-6 mb-3">
+              <div class="float-left form-inline">
+                <button class="btn btn-primary" [disabled]="!hasPermission('mod8.severity8Mod8.save')" (click)="new()">
+                  {{ "shared.buttons.new" | translate }}
+                </button>
+              </div>
+            </div>
+            <div class="col-sm-6 mb-3">
+              <div class="float-right form-inline">
+                <div class="btn-group" role="group">
+                  <button type="button" class="btn btn-outline-secondary" [title]="'shared.buttons.filter' | translate"  disabled>
+                    <i class="fa fa-filter"></i>
+                  </button>
+                  <button type="button" class="btn btn-outline-secondary" [title]="'shared.buttons.refresh' | translate" (click)="grid.newSearch()">
+                    <i class="fa fa-refresh"></i>
+                  </button>
+                </div>
+                &nbsp;
+                <div class="input-group">
+                  <input type="text" class="form-control" [(ngModel)]="grid.textToSearch" (keyup.enter)="grid.newSearch()" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" [title]="'shared.buttons.search' | translate" (click)="grid.newSearch()">
+                      <i class="fa fa-search"></i>
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <app-mod8-severity8-mod8-grid #grid></app-mod8-severity8-mod8-grid>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Form -->
+<div *ngIf="item">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-header">
+          <i class="fa fa-edit"></i> {{ "mod8.severity8Mod8.title" | translate }}
+          <div class="card-actions">
+            <app-loading-indicator [isRunning]="form.isLoading" [layout]="'mode2'"></app-loading-indicator>
+          </div>
+        </div>
+        <div class="card-block">
+          <app-mod8-severity8-mod8-form #form [item]="item" [newRecord]="newRecord" (gridRefreshEventEmitter)="grid.search()"></app-mod8-severity8-mod8-form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

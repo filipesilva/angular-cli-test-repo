@@ -1,0 +1,42 @@
+﻿<form novalidate [formGroup]="formGroup">
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <label>*{{ "mod4.issue10Mod4.fields.projectId_display" | translate }}:</label>
+      <ng-select [ngClass]="{'is-invalid': isInvalid(formGroup, 'projectId')}" formControlName="projectId" [options]="selects.itemsProject10Mod4" [allowClear]="true" [notFoundMsg]="'shared.input.selectNotFound' | translate"></ng-select>
+      <div class="invalid-feedback" *ngIf="hasError(formGroup, 'projectId', 'required')">{{ "mod4.issue10Mod4.fields.projectId_required" | translate }}</div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label>*{{ "mod4.issue10Mod4.fields.title_display" | translate }}:</label>
+      <input type="text" class="form-control" [ngClass]="{'is-invalid': isInvalid(formGroup, 'title')}" maxlength="200" formControlName="title" required />
+      <div class="invalid-feedback" *ngIf="hasError(formGroup, 'title', 'required')">{{ "mod4.issue10Mod4.fields.title_required" | translate }}</div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label>*{{ "mod4.issue10Mod4.fields.categoryId_display" | translate }}:</label>
+      <ng-select [ngClass]="{'is-invalid': isInvalid(formGroup, 'categoryId')}" formControlName="categoryId" [options]="selects.itemsCategory10Mod4" [allowClear]="true" [notFoundMsg]="'shared.input.selectNotFound' | translate"></ng-select>
+      <div class="invalid-feedback" *ngIf="hasError(formGroup, 'categoryId', 'required')">{{ "mod4.issue10Mod4.fields.categoryId_required" | translate }}</div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label>*{{ "mod4.issue10Mod4.fields.statusId_display" | translate }}:</label>
+      <ng-select [ngClass]="{'is-invalid': isInvalid(formGroup, 'statusId')}" formControlName="statusId" [options]="selects.itemsStatus10Mod4" [allowClear]="true" [notFoundMsg]="'shared.input.selectNotFound' | translate"></ng-select>
+      <div class="invalid-feedback" *ngIf="hasError(formGroup, 'statusId', 'required')">{{ "mod4.issue10Mod4.fields.statusId_required" | translate }}</div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label>*{{ "mod4.issue10Mod4.fields.severityId_display" | translate }}:</label>
+      <ng-select [ngClass]="{'is-invalid': isInvalid(formGroup, 'severityId')}" formControlName="severityId" [options]="selects.itemsSeverity10Mod4" [allowClear]="true" [notFoundMsg]="'shared.input.selectNotFound' | translate"></ng-select>
+      <div class="invalid-feedback" *ngIf="hasError(formGroup, 'severityId', 'required')">{{ "mod4.issue10Mod4.fields.severityId_required" | translate }}</div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label>*{{ "mod4.issue10Mod4.fields.description_display" | translate }}:</label>
+      <textarea class="form-control" [ngClass]="{'is-invalid': isInvalid(formGroup, 'description')}" rows="3" formControlName ="description" appHtmlEditor required></textarea>
+      <div class="invalid-feedback" *ngIf="hasError(formGroup, 'description', 'required')">{{ "mod4.issue10Mod4.fields.description_required" | translate }}</div>
+    </div>
+  </div>
+  <div class="form-actions">
+    <button type="button" class="btn btn-primary mr-2" [ladda]="isLoading" [disabled]="!hasPermission('mod4.issue10Mod4.save')" (click)="save()">
+      {{ "shared.buttons.save" | translate }}
+    </button>
+    <button type="button" class="btn btn-default mr-2" (click)="back()">
+      {{ "shared.buttons.cancel" | translate }}
+    </button>
+  </div>
+</form>

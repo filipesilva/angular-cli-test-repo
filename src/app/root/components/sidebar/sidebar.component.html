@@ -1,0 +1,19 @@
+<nav class="sidebar-nav">
+  <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" routerLinkActive="active" [routerLink]="['/home']"><i class="icon-speedometer"></i> Home</a>
+    </li>
+    <li class="divider"></li>
+    <li class="nav-title">
+      Modules
+    </li>
+    <li class="nav-item nav-dropdown" appNavDropdown *ngFor="let item of itemsMenu$ | async">
+      <a class="nav-link nav-dropdown-toggle" href="javascript: void(0)" appNavDropdownToggle><i class="{{ item.cssClass }}"></i> {{ item.menuTextCulture }}</a>
+      <ul class="nav-dropdown-items">
+        <li class="nav-item" *ngFor="let subItem of item.children">
+          <a class="nav-link" routerLinkActive="active" [routerLink]="[subItem.url]"><i class="{{ subItem.cssClass }}"></i> {{ subItem.menuTextCulture }}</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>

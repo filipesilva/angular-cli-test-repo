@@ -1,0 +1,21 @@
+﻿<form novalidate [formGroup]="formGroup">
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <label>{{ "mod8.category8Mod8.fields.parentId_display" | translate }}:</label>
+      <ng-select [ngClass]="{'is-invalid': isInvalid(formGroup, 'parentId')}" formControlName="parentId" [options]="selects.itemsCategory8Mod8" [allowClear]="true" [notFoundMsg]="'shared.input.selectNotFound' | translate"></ng-select>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label>*{{ "mod8.category8Mod8.fields.categoryName_display" | translate }}:</label>
+      <input type="text" class="form-control" [ngClass]="{'is-invalid': isInvalid(formGroup, 'categoryName')}" maxlength="200" formControlName="categoryName" required />
+      <div class="invalid-feedback" *ngIf="hasError(formGroup, 'categoryName', 'required')">{{ "mod8.category8Mod8.fields.categoryName_required" | translate }}</div>
+    </div>
+  </div>
+  <div class="form-actions">
+    <button type="button" class="btn btn-primary mr-2" [ladda]="isLoading" [disabled]="!hasPermission('mod8.category8Mod8.save')" (click)="save()">
+      {{ "shared.buttons.save" | translate }}
+    </button>
+    <button type="button" class="btn btn-default mr-2" (click)="back()">
+      {{ "shared.buttons.cancel" | translate }}
+    </button>
+  </div>
+</form>

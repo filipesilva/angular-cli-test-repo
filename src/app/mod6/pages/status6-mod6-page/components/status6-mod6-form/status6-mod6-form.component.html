@@ -1,0 +1,24 @@
+﻿<form novalidate [formGroup]="formGroup">
+  <div class="row">
+    <div class="col-md-3 mb-3">
+      <label>*{{ "mod6.status6Mod6.fields.statusId_display" | translate }}:</label>
+      <input type="number" class="form-control" [ngClass]="{'is-invalid': isInvalid(formGroup, 'statusId')}" formControlName="statusId" appInteger [readonly]="!newRecord" required />
+      <div class="invalid-feedback" *ngIf="hasError(formGroup, 'statusId', 'required')">{{ "mod6.status6Mod6.fields.statusId_required" | translate }}</div>
+      <div class="invalid-feedback" *ngIf="hasError(formGroup, 'statusId', 'digits')">{{ "mod6.status6Mod6.fields.statusId_invalid" | translate }}</div>
+      <div class="invalid-feedback" *ngIf="hasError(formGroup, 'statusId', 'range')">{{ "mod6.status6Mod6.fields.statusId_invalid" | translate }}</div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label>*{{ "mod6.status6Mod6.fields.description_display" | translate }}:</label>
+      <input type="text" class="form-control" [ngClass]="{'is-invalid': isInvalid(formGroup, 'description')}" maxlength="200" formControlName="description" required />
+      <div class="invalid-feedback" *ngIf="hasError(formGroup, 'description', 'required')">{{ "mod6.status6Mod6.fields.description_required" | translate }}</div>
+    </div>
+  </div>
+  <div class="form-actions">
+    <button type="button" class="btn btn-primary mr-2" [ladda]="isLoading" [disabled]="!hasPermission('mod6.status6Mod6.save')" (click)="save()">
+      {{ "shared.buttons.save" | translate }}
+    </button>
+    <button type="button" class="btn btn-default mr-2" (click)="back()">
+      {{ "shared.buttons.cancel" | translate }}
+    </button>
+  </div>
+</form>

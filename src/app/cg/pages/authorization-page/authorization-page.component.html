@@ -1,0 +1,29 @@
+﻿<!-- Grid -->
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <i class="fa fa-align-justify"></i> {{ "cg.authorization.title" | translate }}
+        <div class="card-actions">
+          <app-loading-indicator [isRunning]="grid.isLoading" [layout]="'mode2'"></app-loading-indicator>
+        </div>
+      </div>
+      <div class="card-block">
+        <div class="row mb10">
+          <div class="col-sm-6 mb-3">
+          </div>
+          <div class="col-sm-6 mb-3">
+            <div class="float-right form-inline">
+              <span class="mr-2">{{ "cg.authorization.fields.idRole_display" | translate }}:</span>
+              <select class="form-control" [(ngModel)]="idRole" (change)="refresh()">
+                <option value="">{{ "shared.input.select" | translate }}</option>
+                <option *ngFor="let item of itemsRole" [value]="item.value">{{ item.label }}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <app-cg-authorization-grid #grid [idRole]="idRole"></app-cg-authorization-grid>
+      </div>
+    </div>
+  </div>
+</div>

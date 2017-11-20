@@ -1,0 +1,19 @@
+// Override Boostrap variables
+@import "bootstrap-variables";
+
+// Import Bootstrap source files from node_modules
+@import "node_modules/bootstrap/scss/bootstrap";
+
+// Import vendors styles
+@import "vendors/vendors";
+
+// Override core variables
+@import "core-variables";
+
+// Import core styles
+@import "core/core";
+
+// Custom styles
+@import "communication";
+@import "spinner";
+@import "custom";

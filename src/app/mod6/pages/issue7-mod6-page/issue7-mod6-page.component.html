@@ -1,0 +1,99 @@
+﻿<!-- Grid -->
+<div [hidden]="item">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <i class="fa fa-align-justify"></i> {{ "mod6.issue7Mod6.title" | translate }}
+          <div class="card-actions">
+            <app-loading-indicator [isRunning]="grid.isLoading" [layout]="'mode2'"></app-loading-indicator>
+          </div>
+        </div>
+        <div class="card-block">
+          <div class="row mb10">
+            <div class="col-sm-6 mb-3">
+              <div class="float-left form-inline">
+                <button class="btn btn-primary" [disabled]="!hasPermission('mod6.issue7Mod6.save')" (click)="new()">
+                  {{ "shared.buttons.new" | translate }}
+                </button>
+              </div>
+            </div>
+            <div class="col-sm-6 mb-3">
+              <div class="float-right form-inline">
+                <div class="btn-group" role="group">
+                  <button type="button" class="btn btn-outline-secondary" [title]="'shared.buttons.filter' | translate" (click)="modalFilter.open()">
+                    <i class="fa fa-filter"></i>
+                  </button>
+                  <button type="button" class="btn btn-outline-secondary" [title]="'shared.buttons.refresh' | translate" (click)="grid.newSearch()">
+                    <i class="fa fa-refresh"></i>
+                  </button>
+                </div>
+                &nbsp;
+                <div class="input-group">
+                  <input type="text" class="form-control" [(ngModel)]="grid.textToSearch" (keyup.enter)="grid.newSearch()" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" [title]="'shared.buttons.search' | translate" (click)="grid.newSearch()">
+                      <i class="fa fa-search"></i>
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <app-mod6-issue7-mod6-grid #grid></app-mod6-issue7-mod6-grid>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Form -->
+<div *ngIf="item">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-header">
+          <i class="fa fa-edit"></i> {{ "mod6.issue7Mod6.title" | translate }}
+          <div class="card-actions">
+            <app-loading-indicator [isRunning]="form.isLoading" [layout]="'mode2'"></app-loading-indicator>
+          </div>
+        </div>
+        <div class="card-block">
+          <app-mod6-issue7-mod6-form #form [item]="item" [newRecord]="newRecord" (gridRefreshEventEmitter)="grid.search()"></app-mod6-issue7-mod6-form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modals -->
+<app-modal-filter #modalFilter>
+  <div class="modal-dialog modal-lg modal-primary" role="document">
+    <div class="row">
+      <div class="form-group col-lg-6 col-md-12">
+        <label class="form-control-label">
+          {{ "mod6.issue7Mod6.fields.projectId_display" | translate }}:
+        </label>
+        <ng-select [(ngModel)]="grid.filters.projectId" [options]="grid.selects.itemsProject7Mod6" [notFoundMsg]="'shared.input.selectNotFound' | translate" [multiple]="true"></ng-select>
+      </div>
+      <div class="form-group col-lg-6 col-md-12">
+        <label class="form-control-label">
+          {{ "mod6.issue7Mod6.fields.categoryId_display" | translate }}:
+        </label>
+        <ng-select [(ngModel)]="grid.filters.categoryId" [options]="grid.selects.itemsCategory7Mod6" [notFoundMsg]="'shared.input.selectNotFound' | translate" [multiple]="true"></ng-select>
+      </div>
+      <div class="form-group col-lg-6 col-md-12">
+        <label class="form-control-label">
+          {{ "mod6.issue7Mod6.fields.statusId_display" | translate }}:
+        </label>
+        <ng-select [(ngModel)]="grid.filters.statusId" [options]="grid.selects.itemsStatus7Mod6" [notFoundMsg]="'shared.input.selectNotFound' | translate" [multiple]="true"></ng-select>
+      </div>
+      <div class="form-group col-lg-6 col-md-12">
+        <label class="form-control-label">
+          {{ "mod6.issue7Mod6.fields.severityId_display" | translate }}:
+        </label>
+        <ng-select [(ngModel)]="grid.filters.severityId" [options]="grid.selects.itemsSeverity7Mod6" [notFoundMsg]="'shared.input.selectNotFound' | translate" [multiple]="true"></ng-select>
+      </div>
+    </div>
+  </div>
+</app-modal-filter>

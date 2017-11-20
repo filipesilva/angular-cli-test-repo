@@ -1,0 +1,55 @@
+<div class="app flex-row align-items-center">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card mx-4">
+          <div class="card-block p-4">
+            <h1>Register</h1>
+            <p class="text-muted">Create your account</p>
+            <form novalidate [formGroup]="formGroup">
+              <div class="row">
+                <div class="col-6">
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" [ngClass]="{'is-invalid': isInvalid(formGroup, 'firstName')}" placeholder="First name" formControlName="firstName">
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" [ngClass]="{'is-invalid': isInvalid(formGroup, 'lastName')}" placeholder="Last name" formControlName="lastName">
+                  </div>
+                </div>
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-addon"><i class="icon-user"></i></span>
+                <input type="text" class="form-control" [ngClass]="{'is-invalid': isInvalid(formGroup, 'username')}" placeholder="Username" formControlName="username">
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-addon">@</span>
+                <input type="email" class="form-control" [ngClass]="{'is-invalid': isInvalid(formGroup, 'email')}" placeholder="Email" formControlName="email">
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-addon"><i class="icon-lock"></i></span>
+                <input type="password" class="form-control" [ngClass]="{'is-invalid': isInvalid(formGroup, 'password')}" placeholder="Password" formControlName="password">
+              </div>
+              <div class="input-group mb-4">
+                <span class="input-group-addon"><i class="icon-lock"></i></span>
+                <input type="password" class="form-control" [ngClass]="{'is-invalid': isInvalid(formGroup, 'repeatPassword')}" placeholder="Repeat password" formControlName="repeatPassword">
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <button type="button" class="btn btn-block btn-primary" [ladda]="isLoading" (click)="register()">Create Account</button>
+                </div>
+                <div class="col-6">
+                  <button type="button" class="btn btn-block btn-outline-primary" (click)="login()">Login</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="card-footer p-4" *ngIf="result && !result.isValid">
+            <span class="text-danger text-center">{{ result.errors[0].message }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

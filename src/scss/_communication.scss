@@ -1,0 +1,25 @@
+.communication-status {
+    position: fixed;
+    width: 100%;
+    left: 40px;
+    top: 5px;
+    z-index: 10000;
+}
+
+  .communication-status span {
+      border: 1px solid #cfcfcf;
+      padding: 5px 20px 5px 20px;
+      background-color: #ffffff;
+  }
+
+  .communication-status span.alert-danger {
+      color: #a94442;
+      background-color: #f2dede;
+      border-color: #ebccd1;
+  }
+
+  .communication-status span.alert-success {
+      color: #3c763d;
+      background-color: #dff0d8;
+      border-color: #d6e9c6;
+  }

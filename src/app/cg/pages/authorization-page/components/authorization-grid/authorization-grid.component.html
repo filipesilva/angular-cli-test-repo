@@ -1,0 +1,32 @@
+﻿<table class="table table-sm .table-responsive table-vcenter">
+  <colgroup>
+    <col style="width: 30%" />
+    <col style="width: 70%" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>{{ "cg.authorization.fields.idFeature_display" | translate }}</th>
+      <th>{{ "cg.feature.fields.featureKey_display" | translate }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of items">
+      <td [style.padding-left.px]="item.level * 50">
+        <label class="switch switch-default switch-primary mr-2">
+          <input type="checkbox" class="switch-input" (click)="check(item)" [(ngModel)]="item.authorized" />
+          <span class="switch-label"></span>
+          <span class="switch-handle"></span>
+        </label>
+        <a (click)="check(item)">{{ item.featureName }}</a>
+      </td>
+      <td>
+        {{ item.featureKey }}
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div class="form-actions">
+  <button type="button" class="btn btn-primary mr-2" [ladda]="isLoading" [disabled]="!hasPermission('cg.authorization.save') || !idRole" (click)="save()">
+    {{ "shared.buttons.save" | translate }}
+  </button>
+</div>

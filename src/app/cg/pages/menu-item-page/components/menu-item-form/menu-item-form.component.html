@@ -1,0 +1,70 @@
+﻿<form novalidate [formGroup]="formGroup">
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <label>{{ "cg.menuItem.fields.idMenuItemParent_display" | translate }}:</label>
+      <ng-select [ngClass]="{'is-invalid': isInvalid(formGroup, 'idMenuItemParent')}" formControlName="idMenuItemParent" [options]="selects.itemsMenuItem" [allowClear]="true" [notFoundMsg]="'shared.input.selectNotFound' | translate"></ng-select>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label>*{{ "cg.menuItem.fields.menuText_display" | translate }}:</label>
+      <input type="text" class="form-control" [ngClass]="{'is-invalid': isInvalid(formGroup, 'menuText')}" maxlength="100" formControlName="menuText" required />
+      <div class="invalid-feedback" *ngIf="hasError(formGroup, 'menuText', 'required')">{{ "cg.menuItem.fields.menuText_required" | translate }}</div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label>{{ "cg.menuItem.fields.url_display" | translate }}:</label>
+      <input type="text" class="form-control" [ngClass]="{'is-invalid': isInvalid(formGroup, 'url')}" maxlength="100" formControlName="url" />
+    </div>
+    <div class="col-md-6 mb-3">
+      <label>{{ "cg.menuItem.fields.cssClass_display" | translate }}:</label>
+      <input type="text" class="form-control" [ngClass]="{'is-invalid': isInvalid(formGroup, 'cssClass')}" maxlength="100" formControlName="cssClass" />
+    </div>
+    <div class="col-md-6 mb-3">
+      <label>{{ "cg.menuItem.fields.groupName_display" | translate }}:</label>
+      <input type="text" class="form-control" [ngClass]="{'is-invalid': isInvalid(formGroup, 'groupName')}" maxlength="100" formControlName="groupName" />
+    </div>
+    <div class="col-md-3 mb-3">
+      <label>{{ "cg.menuItem.fields.authenticated_display" | translate }}:</label>
+      <br />
+      <label class="switch switch-default switch-primary">
+        <input type="checkbox" class="switch-input" formControlName="authenticated" />
+        <span class="switch-label"></span>
+        <span class="switch-handle"></span>
+      </label>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label>{{ "cg.menuItem.fields.checkPermission_display" | translate }}:</label>
+      <br />
+      <label class="switch switch-default switch-primary">
+        <input type="checkbox" class="switch-input" formControlName="checkPermission" />
+        <span class="switch-label"></span>
+        <span class="switch-handle"></span>
+      </label>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label>{{ "cg.menuItem.fields.featureKey_display" | translate }}:</label>
+      <input type="text" class="form-control" [ngClass]="{'is-invalid': isInvalid(formGroup, 'featureKey')}" maxlength="100" formControlName="featureKey" />
+    </div>
+    <div class="col-md-3 mb-3">
+      <label>{{ "cg.menuItem.fields.menuOrder_display" | translate }}:</label>
+      <input type="number" class="form-control" [ngClass]="{'is-invalid': isInvalid(formGroup, 'menuOrder')}" formControlName ="menuOrder" appInteger />
+      <div class="invalid-feedback" *ngIf="hasError(formGroup, 'menuOrder', 'digits')">{{ "cg.menuItem.fields.menuOrder_invalid" | translate }}</div>
+      <div class="invalid-feedback" *ngIf="hasError(formGroup, 'menuOrder', 'range')">{{ "cg.menuItem.fields.menuOrder_invalid" | translate }}</div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label>{{ "cg.menuItem.fields.enabled_display" | translate }}:</label>
+      <br />
+      <label class="switch switch-default switch-primary">
+        <input type="checkbox" class="switch-input" formControlName="enabled" />
+        <span class="switch-label"></span>
+        <span class="switch-handle"></span>
+      </label>
+    </div>
+  </div>
+  <div class="form-actions">
+    <button type="button" class="btn btn-primary mr-2" [ladda]="isLoading" [disabled]="!hasPermission('cg.menuItem.save')" (click)="save()">
+      {{ "shared.buttons.save" | translate }}
+    </button>
+    <button type="button" class="btn btn-default mr-2" (click)="back()">
+      {{ "shared.buttons.back" | translate }}
+    </button>
+  </div>
+</form>

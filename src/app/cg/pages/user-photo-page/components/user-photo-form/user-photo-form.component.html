@@ -1,0 +1,22 @@
+﻿<form novalidate [formGroup]="formGroup">
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <label>{{ "cg.userPhoto.fields.photo_display" | translate }}:</label>
+      <div [hidden]="item.hasPhoto">
+        <app-file #filePhoto name="photo" accept="image/*"></app-file>
+      </div>
+      <div *ngIf="item.hasPhoto">
+        <label class="mr-2"><a href="javascript: void(0)" (click)="download(item.idUser, 'Photo', item.fileName)">{{ item.fileName }}</a></label>
+        <button class="btn btn-sm btn-outline-danger" (click)="removeFilePhoto()" title="{{ 'shared.buttons.delete' | translate }}"><i class="fa fa-trash-o"></i></button>
+      </div>
+    </div>
+  </div>
+  <div class="form-actions">
+    <button type="button" class="btn btn-primary mr-2" [ladda]="isLoading" [disabled]="!hasPermission('cg.user.save')" (click)="save()">
+      {{ "shared.buttons.save" | translate }}
+    </button>
+    <button type="button" class="btn btn-default mr-2" (click)="back()">
+      {{ "shared.buttons.cancel" | translate }}
+    </button>
+  </div>
+</form>

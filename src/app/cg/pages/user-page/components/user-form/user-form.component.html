@@ -1,0 +1,82 @@
+﻿<form novalidate [formGroup]="formGroup">
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <label>*{{ "cg.user.fields.firstName_display" | translate }}:</label>
+      <input type="text" class="form-control" [ngClass]="{'is-invalid': isInvalid(formGroup, 'firstName')}" maxlength="200" formControlName="firstName" required />
+      <div class="invalid-feedback" *ngIf="hasError(formGroup, 'firstName', 'required')">{{ "cg.user.fields.firstName_required" | translate }}</div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label>{{ "cg.user.fields.lastName_display" | translate }}:</label>
+      <input type="text" class="form-control" [ngClass]="{'is-invalid': isInvalid(formGroup, 'lastName')}" maxlength="200" formControlName="lastName" />
+    </div>
+    <div class="col-md-6 mb-3">
+      <label>*{{ "cg.user.fields.username_display" | translate }}:</label>
+      <input type="text" class="form-control" [ngClass]="{'is-invalid': isInvalid(formGroup, 'username')}" maxlength="100" formControlName="username" required />
+      <div class="invalid-feedback" *ngIf="hasError(formGroup, 'username', 'required')">{{ "cg.user.fields.username_required" | translate }}</div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label>*{{ "cg.user.fields.email_display" | translate }}:</label>
+      <input type="email" class="form-control" [ngClass]="{'is-invalid': isInvalid(formGroup, 'email')}" maxlength="200" formControlName="email" required />
+      <div class="invalid-feedback" *ngIf="hasError(formGroup, 'email', 'required')">{{ "cg.user.fields.email_required" | translate }}</div>
+    </div>
+    <div class="col-md-6 mb-3" *ngIf="newRecord">
+      <label>*{{ "cg.user.fields.password_display" | translate }}:</label>
+      <input type="password" class="form-control" [ngClass]="{'is-invalid': isInvalid(formGroup, 'password')}" maxlength="2000" formControlName ="password" />
+    </div>
+    <div class="col-md-3 mb-3" *ngIf="!newRecord">
+      <label>{{ "cg.user.fields.creationDate_display" | translate }}:</label><br />
+      <span>{{ item.creationDate | date:"medium" }}</span>
+    </div>
+    <div class="col-md-3 mb-3" *ngIf="!newRecord">
+      <label>{{ "cg.user.fields.logonDate_display" | translate }}:</label><br />
+      <span>{{ item.logonDate | date:"medium" }}</span>
+    </div>
+    <div class="col-md-3 mb-3" *ngIf="!newRecord">
+      <label>{{ "cg.user.fields.lastActionDate_display" | translate }}:</label><br />
+      <span>{{ item.lastActionDate | date:"medium" }}</span>
+    </div>
+    <div class="col-md-3 mb-3" *ngIf="!newRecord">
+      <label>{{ "cg.user.fields.invalidLogonAmount_display" | translate }}:</label><br />
+      <span>{{ item.invalidLogonAmount }}</span>
+    </div>
+    <div class="col-md-3 mb-3" *ngIf="!newRecord">
+      <label>{{ "cg.user.fields.emailConfirmed_display" | translate }}:</label>
+      <br />
+      <label class="switch switch-default switch-primary">
+        <input type="checkbox" class="switch-input" formControlName="emailConfirmed" />
+        <span class="switch-label"></span>
+        <span class="switch-handle"></span>
+      </label>
+    </div>
+    <div class="col-md-3 mb-3" *ngIf="!newRecord">
+      <label>{{ "cg.user.fields.enabled_display" | translate }}:</label>
+      <br />
+      <label class="switch switch-default switch-primary">
+        <input type="checkbox" class="switch-input" formControlName="enabled" />
+        <span class="switch-label"></span>
+        <span class="switch-handle"></span>
+      </label>
+    </div>
+    <div class="col-md-3 mb-3" *ngIf="!newRecord">
+      <label>{{ "cg.user.fields.blocked_display" | translate }}:</label>
+      <br />
+      <label class="switch switch-default switch-primary">
+        <input type="checkbox" class="switch-input" formControlName="blocked" />
+        <span class="switch-label"></span>
+        <span class="switch-handle"></span>
+      </label>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label><span>{{ "cg.user.fields.role_display" | translate }}:</span></label>
+      <ng-select formControlName="roles" [options]="selects.itemsRole" [notFoundMsg]="'shared.input.selectNotFound' | translate" [multiple]="true"></ng-select>
+    </div>
+  </div>
+  <div class="form-actions">
+    <button type="button" class="btn btn-primary mr-2" [ladda]="isLoading" [disabled]="!hasPermission('cg.user.save')" (click)="save()">
+      {{ "shared.buttons.save" | translate }}
+    </button>
+    <button type="button" class="btn btn-default mr-2" (click)="back()">
+      {{ "shared.buttons.back" | translate }}
+    </button>
+  </div>
+</form>

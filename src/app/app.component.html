@@ -1,0 +1,7 @@
+<ngx-loading-bar></ngx-loading-bar>
+<div *ngIf="communicationService.uploadMessage" class="communication-status">
+    <div class="text-center">
+        <span class="alert {{ communicationService.uploadMessageType }}">{{ communicationService.uploadMessage }}</span>
+    </div>
+</div>
+<router-outlet></router-outlet>

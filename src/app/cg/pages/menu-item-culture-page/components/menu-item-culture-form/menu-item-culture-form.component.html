@@ -1,0 +1,22 @@
+﻿<form novalidate [formGroup]="formGroup">
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <label>*{{ "cg.menuItemCulture.fields.idCulture_display" | translate }}:</label>
+      <ng-select [ngClass]="{'is-invalid': isInvalid(formGroup, 'idCulture')}" formControlName="idCulture" [options]="selects.itemsCulture" [allowClear]="true" [notFoundMsg]="'shared.input.selectNotFound' | translate"></ng-select>
+      <div class="invalid-feedback" *ngIf="hasError(formGroup, 'idCulture', 'required')">{{ "cg.menuItemCulture.fields.idCulture_required" | translate }}</div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label>*{{ "cg.menuItemCulture.fields.menuText_display" | translate }}:</label>
+      <input type="text" class="form-control" [ngClass]="{'is-invalid': isInvalid(formGroup, 'menuText')}" maxlength="100" formControlName="menuText" required />
+      <div class="invalid-feedback" *ngIf="hasError(formGroup, 'menuText', 'required')">{{ "cg.menuItemCulture.fields.menuText_required" | translate }}</div>
+    </div>
+  </div>
+  <div class="form-actions">
+    <button type="button" class="btn btn-primary mr-2" [ladda]="isLoading" [disabled]="!hasPermission('cg.menuItem.save')" (click)="save()">
+      {{ "shared.buttons.save" | translate }}
+    </button>
+    <button type="button" class="btn btn-default mr-2" (click)="back()">
+      {{ "shared.buttons.cancel" | translate }}
+    </button>
+  </div>
+</form>

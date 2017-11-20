@@ -1,0 +1,112 @@
+// Here you can add other styles
+ng-select.is-invalid > div {
+  border-color: #f86c6b;
+}
+
+ng-select.is-invalid + div {
+  display: block;
+}
+
+ng-select > div > div.single {
+  height: 33px !important;
+}
+
+ng-select > div > div.single > div.clear, ng-select > div > div.single > div.toggle {
+  line-height: 33px !important;
+}
+
+ng-select > div > div.multiple {
+  min-height: 33px !important;
+}
+
+ng-select > div > div.single > div.value, ng-select > div > div.single > div.placeholder {
+  padding: 2px 10px !important;
+}
+
+ng-select > div > div.multiple > div.option {
+  padding: 2px 4px !important;
+}
+
+.bootstrap-filestyle input.form-control {
+  height: 35px;
+}
+
+.bootstrap-filestyle .form-control:disabled, .bootstrap-filestyle .form-control:disabled .form-control[readonly] {
+  background-color: initial !important;
+}
+
+table thead th.sorting {
+  cursor: pointer;
+}
+
+  table thead th.sorting:after {
+      font-family: fontawesome;
+      content: "\f0dc";
+      color: #dfdfdf;
+      padding-left: 5px;
+  }
+
+  table thead th.sorting.sort-asc:after {
+      font-family: fontawesome;
+      content: "\f0d8";
+      color: #808080;
+  }
+
+  table thead th.sorting.sort-desc:after {
+      font-family: fontawesome;
+      content: "\f0d7";
+      color: #808080;
+  }
+
+.table-vcenter > tbody > tr > td {
+   vertical-align: middle;
+}
+
+.modal.modal-large .modal-dialog {
+  max-width: 800px;
+}
+
+.form-inline select.form-control {
+  padding-top: 5px;
+}
+
+select.form-control {
+  padding-top: 5px !important;
+}
+
+.ladda-button {
+  position: initial;
+}
+
+.ladda-button .ladda-label {
+  position: initial !important;
+}
+
+.ladda-button[data-loading] {
+  position: relative;
+}
+
+.nav-culture img {
+  max-width: 24px;
+}
+
+.nav-culture .dropdown-menu {
+  min-width: 66px;
+}
+
+.nav-culture .dropdown-item {
+  border-bottom: 0px;
+  min-width: 64px !important;
+}
+
+.app-body .main {
+  min-height: 94vh;
+}
+
+.input-group .form-control {
+  z-index: 0;
+}
+
+.input-group-btn:not(:first-child) > .btn, .input-group-btn:not(:first-child) > .btn-group {
+  z-index: 0;
+}

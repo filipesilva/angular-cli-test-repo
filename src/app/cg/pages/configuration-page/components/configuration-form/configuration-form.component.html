@@ -1,0 +1,35 @@
+﻿<form novalidate [formGroup]="formGroup">
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <label>*{{ "cg.configuration.fields.key_display" | translate }}:</label>
+      <input type="text" class="form-control" [ngClass]="{'is-invalid': isInvalid(formGroup, 'key')}" maxlength="100" formControlName="key" [readonly]="!newRecord" required />
+      <div class="invalid-feedback" *ngIf="hasError(formGroup, 'key', 'required')">{{ "cg.configuration.fields.key_required" | translate }}</div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label>{{ "cg.configuration.fields.value_display" | translate }}:</label>
+      <input type="text" class="form-control" [ngClass]="{'is-invalid': isInvalid(formGroup, 'value')}" maxlength="3000" formControlName ="value" />
+    </div>
+    <div class="col-md-6 mb-3">
+      <label>{{ "cg.configuration.fields.description_display" | translate }}:</label>
+      <textarea class="form-control" [ngClass]="{'is-invalid': isInvalid(formGroup, 'description')}" maxlength="3000" formControlName ="description" rows="3"></textarea>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label>{{ "cg.configuration.fields.isEncrypted_display" | translate }}:</label>
+      <br />
+      <label class="switch switch-default switch-primary">
+        <input type="checkbox" class="switch-input" formControlName="isEncrypted" />
+        <span class="switch-label"></span>
+        <span class="switch-handle"></span>
+      </label>
+    </div>
+    
+  </div>
+  <div class="form-actions">
+    <button type="button" class="btn btn-primary mr-2" [ladda]="isLoading" [disabled]="!hasPermission('cg.configuration.save')" (click)="save()">
+      {{ "shared.buttons.save" | translate }}
+    </button>
+    <button type="button" class="btn btn-default mr-2" (click)="back()">
+      {{ "shared.buttons.cancel" | translate }}
+    </button>
+  </div>
+</form>

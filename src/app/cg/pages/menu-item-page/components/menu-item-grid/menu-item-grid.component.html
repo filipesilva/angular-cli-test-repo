@@ -1,0 +1,45 @@
+﻿<table class="table table-responsive table-striped table-vcenter">
+  <colgroup>
+    <col style="width: 33%" />
+    <col style="width: 20%" />
+    <col style="width: 20%" />
+    <col style="width: 15%" />
+    <col style="width: 12%" class="hidden-print" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th class="sorting" (click)="order('recursiveName')" [ngClass]="checkClass('recursiveName')">
+        {{ "cg.menuItem.fields.recursiveName_display" | translate }}
+      </th>
+      <th class="sorting" (click)="order('menuText')" [ngClass]="checkClass('menuText')">
+        {{ "cg.menuItem.fields.menuText_display" | translate }}
+      </th>
+      <th class="sorting" (click)="order('url')" [ngClass]="checkClass('url')">
+        {{ "cg.menuItem.fields.url_display" | translate }}
+      </th>
+      <th class="text-center sorting" (click)="order('enabled')" [ngClass]="checkClass('enabled')">
+        {{ "cg.menuItem.fields.enabled_display" | translate }}
+      </th>
+      <th class="text-center hidden-print"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of items" (dblclick)="edit(item.idMenuItem)">
+      <td>{{ item.recursiveName }}</td>
+      <td>{{ item.menuText }}</td>
+      <td>{{ item.url }}</td>
+      <td class="text-center"><i [ngClass]="{'fa fa-check text-primary': item.enabled}"></i></td>
+      <td class="text-center hidden-print">
+        <button class="btn btn-sm btn-outline-success mr-2" [title]="'shared.buttons.edit' | translate" [disabled]="!hasPermission('cg.menuItem.save')" (click)="edit(item.idMenuItem)">
+          <i class="fa fa-pencil"></i>
+        </button>
+        <button class="btn btn-sm btn-outline-danger mr-2" [title]="'shared.buttons.delete' | translate" [disabled]="!hasPermission('cg.menuItem.delete')" (click)="confirmDelete(item.idMenuItem)">
+          <i class="fa fa-trash-o"></i>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<app-grid-pagination [grid]="this"></app-grid-pagination>
+<app-loading-indicator [isRunning]="isFirstLoading" [layout]="'mode1'"></app-loading-indicator>
+<app-modal-delete #modalDelete></app-modal-delete>
