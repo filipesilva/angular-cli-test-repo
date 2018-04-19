@@ -2,7 +2,73 @@
 
 Repository for testing Angular CLI builds with a medium-large project.
 
+## Angular CLI 1.7.4
 
+15 minutes, around 5gb peak memory usage for the main process, plus 7*600MB for parallel uglify.
+
+```
+$ npm run prod && npm run version
+
+> angular-cli-test-repo@0.0.0 prod D:\sandbox\angular-cli-test-repo
+> npm run ng-high-memory -- build --prod
+
+
+> angular-cli-test-repo@0.0.0 ng-high-memory D:\sandbox\angular-cli-test-repo
+> node --max_old_space_size=8000 ./node_modules/@angular/cli/bin/ng "build" "--prod"
+
+Date: 2018-04-19T20:27:10.307Z
+Hash: 82bbb90e94e89fb3c337
+Time: 887953ms
+chunk {9} 9.3be46ae244f06ee9000e.chunk.js () 1.86 MB  [rendered]
+chunk {scripts} scripts.bbb6fd2cbe13341fd8c8.bundle.js (scripts) 6.22 kB [initial] [rendered]
+chunk {0} 0.2ef9a9952802d209dacc.chunk.js (common) 49 kB  [rendered]
+chunk {1} 1.39342b127ed12f945142.chunk.js () 3.03 kB  [rendered]
+chunk {2} 2.390323424ea8e50f16dd.chunk.js () 1.86 MB  [rendered]
+chunk {3} 3.369d48a629262cc440a6.chunk.js () 1.86 MB  [rendered]
+chunk {4} 4.65c56c84c13d805d3c91.chunk.js () 1.86 MB  [rendered]
+chunk {5} 5.862a0a63b92647a5333f.chunk.js () 1.86 MB  [rendered]
+chunk {6} 6.f8c9ead5785a7c495314.chunk.js () 1.86 MB  [rendered]
+chunk {7} 7.072c81c8c4b05ddb5a36.chunk.js () 1.86 MB  [rendered]
+chunk {8} 8.2734e5fcd23351959662.chunk.js () 1.86 MB  [rendered]
+chunk {10} 10.7ed2c03b018f394f07b7.chunk.js () 1.86 MB  [rendered]
+chunk {11} 11.e13e816af08864901497.chunk.js () 1.86 MB  [rendered]
+chunk {12} 12.9b56b47cde929524bdd3.chunk.js () 355 kB  [rendered]
+chunk {13} 13.727164d0175fcd8c9089.chunk.js () 65.7 kB  [rendered]
+chunk {14} main.3a50f2677caed8d868de.bundle.js (main) 1.55 MB [initial] [rendered]
+chunk {15} polyfills.c9619c56f2df1d8a4dab.bundle.js (polyfills) 59.7 kB [initial] [rendered]
+chunk {16} styles.7d0103b045fb29934ebb.bundle.css (styles) 225 kB [initial] [rendered]
+chunk {17} inline.51e230eb73071f6b3ff0.bundle.js (inline) 1.73 kB [entry] [rendered]
+
+> angular-cli-test-repo@0.0.0 version D:\sandbox\angular-cli-test-repo
+> ng --version
+
+
+    _                      _                 ____ _     ___
+   / \   _ __   __ _ _   _| | __ _ _ __     / ___| |   |_ _|
+  / △ \ | '_ \ / _` | | | | |/ _` | '__|   | |   | |    | |
+ / ___ \| | | | (_| | |_| | | (_| | |      | |___| |___ | |
+/_/   \_\_| |_|\__, |\__,_|_|\__,_|_|       \____|_____|___|
+               |___/
+
+Angular CLI: 1.7.4
+Node: 8.11.0
+OS: win32 x64
+Angular: 5.2.10
+... animations, common, compiler, compiler-cli, core, forms
+... http, language-service, platform-browser
+... platform-browser-dynamic, router
+
+@angular/cli: 1.7.4
+@angular-devkit/build-optimizer: 0.3.2
+@angular-devkit/core: 0.3.2
+@angular-devkit/schematics: 0.3.2
+@ngtools/json-schema: 1.2.0
+@ngtools/webpack: 1.10.2
+@schematics/angular: 0.3.2
+@schematics/package-update: 0.3.2
+typescript: 2.6.2
+webpack: 3.11.0
+```
 ## Angular CLI 1.7.0-beta.1
 
 10 minutes, around 5gb peak memory usage.
