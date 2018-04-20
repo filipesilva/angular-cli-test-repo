@@ -2,6 +2,8 @@
 
 Repository for testing Angular CLI builds with a medium-large project.
 
+A webpack only version of this codebase can be found at https://github.com/filipesilva/webpack-module-concatenation-memory.
+
 ## Angular CLI 6.0.0-rc.5
 
 15 minutes, around 5gb peak memory usage for the main process, plus 7*600MB for parallel uglify.
