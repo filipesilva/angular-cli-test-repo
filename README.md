@@ -2,6 +2,80 @@
 
 Repository for testing Angular CLI builds with a medium-large project.
 
+## Angular CLI 6.0.0-rc.5
+
+15 minutes, around 5gb peak memory usage for the main process, plus 7*600MB for parallel uglify.
+
+```
+$ npm run prod && npm run version
+
+> angular-cli-test-repo@0.0.0 prod D:\sandbox\angular-cli-test-repo
+> npm run ng-high-memory -- build --prod
+
+
+> angular-cli-test-repo@0.0.0 ng-high-memory D:\sandbox\angular-cli-test-repo
+> node --max_old_space_size=8000 ./node_modules/@angular/cli/bin/ng "build" "--prod"
+
+
+Date: 2018-04-20T20:59:37.525Z
+Hash: 5986849a789431615149
+Time: 2705037ms
+chunk {9} 9.919fb6ba46f4543e4af2.js () 1.86 MB  [rendered]
+chunk {scripts} scripts.bbb6fd2cbe13341fd8c8.js (scripts) 6.22 kB  [rendered]
+chunk {0} 0.e03466240eb80bf64621.js () 45.5 kB  [rendered]
+chunk {1} 1.b7421322e761494eebcf.js () 3.03 kB  [rendered]
+chunk {2} 2.068ed6e7a94ba8534422.js () 1.86 MB  [rendered]
+chunk {3} 3.535cdc837b84fe47a758.js () 1.86 MB  [rendered]
+chunk {4} 4.da4a06286d0eec15064e.js () 1.86 MB  [rendered]
+chunk {5} 5.e9e1bf0576495a1277df.js () 1.86 MB  [rendered]
+chunk {6} 6.292a1d8ac84446cdc490.js () 1.86 MB  [rendered]
+chunk {7} 7.8db0283d4244a626a819.js () 1.86 MB  [rendered]
+chunk {8} 8.0f27f94cb14e92a9e217.js () 1.86 MB  [rendered]
+chunk {10} 10.5a3b5835dac5f8230df3.js () 1.87 MB  [rendered]
+chunk {11} 11.4243a5884c6effbe5ab0.js () 1.86 MB  [rendered]
+chunk {12} 12.fdf08885e9abaa806c92.js () 355 kB  [rendered]
+chunk {13} 13.b528153f2f654c34cb95.js () 66.7 kB  [rendered]
+chunk {14} runtime.6347fe64716c601fea43.js (runtime) 2.14 kB [entry] [rendered]
+chunk {15} styles.19aba7f537206a829d39.css (styles) 200 kB [initial] [rendered]
+chunk {16} polyfills.8ffe695a83b135dbeb50.js (polyfills) 59.4 kB [initial] [rendered]
+chunk {17} main.dc3abdf4879d2567f0d2.js (main) 1.55 MB [initial] [rendered]
+
+> angular-cli-test-repo@0.0.0 version D:\sandbox\angular-cli-test-repo
+> ng --version
+
+
+     _                      _                 ____ _     ___
+    / \   _ __   __ _ _   _| | __ _ _ __     / ___| |   |_ _|
+   / △ \ | '_ \ / _` | | | | |/ _` | '__|   | |   | |    | |
+  / ___ \| | | | (_| | |_| | | (_| | |      | |___| |___ | |
+ /_/   \_\_| |_|\__, |\__,_|_|\__,_|_|       \____|_____|___|
+                |___/
+
+
+Angular CLI: 6.0.0-rc.5
+Node: 8.11.0
+OS: win32 x64
+Angular: 5.2.10
+... animations, common, compiler, compiler-cli, core, forms
+... http, language-service, platform-browser
+... platform-browser-dynamic, router
+
+Package                           Version
+-----------------------------------------------------------
+@angular-devkit/architect         0.5.7
+@angular-devkit/build-angular     0.5.7
+@angular-devkit/build-optimizer   0.5.7
+@angular-devkit/core              0.5.7
+@angular-devkit/schematics        0.5.7
+@angular/cli                      6.0.0-rc.5
+@ngtools/json-schema              1.1.0
+@ngtools/webpack                  6.0.0-rc.5
+@schematics/angular               0.5.7
+@schematics/update                0.5.7
+rxjs                              5.5.10
+typescript                        2.6.2
+webpack                           4.5.0
+```
 ## Angular CLI 1.7.4
 
 15 minutes, around 5gb peak memory usage for the main process, plus 7*600MB for parallel uglify.

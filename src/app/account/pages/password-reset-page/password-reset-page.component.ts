@@ -47,7 +47,10 @@ export class PasswordResetPageComponent extends FormComponent implements OnInit,
     this.subscription = this.activatedRoute.params.subscribe(
       param => {
         this.securityKey = param['id'];
-      });
+        // Not sure why this required casting, but it was erroring with the message below:
+        // ERROR in src/app/account/pages/password-reset-page/password-reset-page.component.ts(47,5): error TS90010: Type 'Subscription' is not assignable to type 'Subscription'. Two different types with this name exist, but they are unrelated.
+        // Property '_parent' is protected but type 'Subscription' is not a class derived from 'Subscription'.
+      }) as any;
   }
 
   ngOnDestroy() {
